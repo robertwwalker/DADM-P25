@@ -5,14 +5,20 @@ project:
 website:
   description: "Data Analysis, Modelling, and Decision Making"
   site-url: https://robertwwalker.github.io/DADM-P25 # you must change this appropriately for RSS feeds to work properly
-  title: "DADM-P25"
+  title: "DADM for Professionals 2025"
+  page-navigation: true
   navbar:
     right:
       - about.qmd
       - icon: github
-        href: https://github.com/
+        href: https://github.com/robertwwalker/
       - icon: twitter
-        href: https://twitter.com
+        href: https://twitter.com/PieRatio
+
+
+  sidebar:
+    contents: slides
+
 format:
   html:
     theme:
