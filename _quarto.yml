@@ -1,0 +1,23 @@
+project:
+  type: website
+
+website:
+  description: "Data Analysis, Modelling, and Decision Making"
+  site-url: https://robertwwalker.github.io/DADM-P25 # you must change this appropriately for RSS feeds to work properly
+  title: "DADM-P25"
+  navbar:
+    right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/
+      - icon: twitter
+        href: https://twitter.com
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+    css: styles.css
+
+
+
