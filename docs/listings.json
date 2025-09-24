@@ -2,9 +2,10 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/esquisse/index.html",
+      "/posts/causality/index.html",
       "/posts/week-5/index.html",
       "/posts/Mapmaker/index.html",
+      "/posts/esquisse/index.html",
       "/posts/joins/index.html"
     ]
   }
