@@ -51,3 +51,5 @@ rsconnect/
 # Mac
 
 ._*
+/.quarto/
+**/*.quarto_ipynb

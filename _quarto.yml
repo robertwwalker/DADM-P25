@@ -1,5 +1,6 @@
 project:
   type: website
+  output-dir: docs
 
 website:
   description: "Data Analysis, Modelling, and Decision Making"
@@ -15,7 +16,7 @@ website:
 format:
   html:
     theme:
-      - cosmo
+      - superhero
       - brand
     css: styles.css
 
