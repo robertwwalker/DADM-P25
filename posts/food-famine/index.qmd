@@ -1,0 +1,173 @@
+---
+title: "Gemini for Data on Hunger"
+author: "Robert W. Walker"
+date: "2025-09-25"
+format: 
+   html:
+     theme: superhero
+     embed-resources: true
+     lightbox: true
+---
+
+## Gemini from Willamette
+
+
+::: {.callout-note}
+## RWW
+
+Can you provide R code to acquire data from a reputable source about cross-national food insecurity, famine likelihood, and related starvation and malnutrition risk for countries? I want to map these data so I will need a standard three letter identifier like the world bank's iso_3c to join to a map.
+:::
+
+
+::: {.callout-tip collapse="true"}
+## Gemini responds
+
+
+It's great that you're looking for highly relevant and map-ready data! The best and most reputable source for cross-national food insecurity and related data that consistently uses ISO 3-letter country codes (iso3c) is the World Bank, which you can access directly in R using the wbstats package.
+
+The World Bank hosts several indicators covering malnutrition and hunger. For famine risk, the best public data is often provided by the Integrated Food Security Phase Classification (IPC), which you would need to download separately.
+
+Here is the R code to acquire, clean, and prepare this data for mapping.
+
+1. World Bank Data (Malnutrition & Food Access) 🌐
+The World Bank provides reliable, standardized annual data on key indicators related to malnutrition and food access. The wbstats package automatically uses the iso3c identifier, which is perfect for joining to map files.
+
+### R Code
+
+```{r}
+#| error: true
+# Install packages if you haven't already
+# install.packages(c("wbstats", "dplyr", "countrycode", "tidyr"))
+
+library(wbstats)
+library(dplyr)
+library(countrycode)
+library(tidyr)
+
+# --- Define the World Bank Indicators ---
+# Key indicators related to food insecurity and malnutrition
+food_indicators <- c(
+  # Malnutrition/Starvation Risk
+  stunting = "SH.STA.STNT.ZS",      # Prevalence of stunting, height-for-age (% of children under 5)
+  wasting = "SH.STA.WAST.ZS",       # Prevalence of wasting, weight-for-height (% of children under 5)
+  underweight = "SH.STA.OWGH.ZS",   # Prevalence of underweight, weight-for-age (% of children under 5)
+  
+  # Food Insecurity/Access
+  undernourishment = "SN.ITK.DEFC.ZS", # Prevalence of undernourishment (% of population)
+  food_exports = "TX.VAL.FOOD.CD.ZS" # Food exports (% of merchandise exports)
+)
+
+# --- Download the Data ---
+cat("Downloading World Bank food security data...\n")
+
+# Use 'countries_only' to filter out regional aggregates (like 'Arab World', 'EU', etc.)
+wb_data_raw <- wb_data(
+  indicator = food_indicators,
+  country = "countries_only",
+  start_date = 2018, # Get data from 2018 onwards
+  end_date = 2024    # Up to the latest available year
+)
+
+# --- Clean and Prepare for Mapping ---
+wb_data_clean <- wb_data_raw %>%
+  # Select key columns: iso3c is the join key
+  select(iso3c, country, date, stunting, wasting, undernourishment) %>%
+  
+  # Filter to keep only the latest observation for each country for mapping
+  # (This is crucial for a cross-sectional map)
+  group_by(iso3c) %>%
+  slice_max(order_by = date, n = 1, with_ties = FALSE) %>%
+  ungroup() %>%
+  
+# Rename the date to be more descriptive (the year of the observation)
+  rename(Data_Year = date) %>%
+  
+# Clean up country names and remove missing ISO codes
+  filter(!is.na(iso3c)) %>%
+  select(-country) # Remove the 'country' column to use the one from the dictionary later
+
+cat("World Bank data acquired and prepared. Latest available data:\n")
+print(head(wb_data_clean))
+
+# Save the final data frame
+wb_mapping_data <- wb_data_clean
+```
+
+2. Integrated Food Security Phase Classification (IPC) Data (Famine Likelihood) 🚨
+The most authoritative source for assessing famine likelihood, acute food insecurity, and emergency risk is the IPC (Integrated Food Security Phase Classification) and its partners (FAO, WFP, etc.).
+
+This data is often not in a single API but is compiled and shared via the Humanitarian Data Exchange (HDX). The simplest way to get the latest comprehensive file is to download the global IPC/CH (Cadre Harmonisé) CSV file and load it.
+
+### R Code (IPC Famine Data)
+
+The following code downloads the data directly from the HDX link (which contains an iso3 column) and extracts the key phases.
+
+```{r}
+#| error: true
+# --- Download the Latest IPC Data from HDX ---
+# This link points to the combined IPC and CH (Cadre Harmonisé) classification data
+ipc_url <- "https://data.humdata.org/dataset/5091ff7d-1c39-4d69-a1b4-1064df195159/resource/201df499-4c2f-4888-8b20-d336940d96d9/download/ipc_ch_latest.csv"
+
+cat("\nDownloading IPC Famine Risk Data...\n")
+ipc_data_raw <- read.csv(ipc_url)
+
+# --- Clean and Extract Famine Risk (IPC Phase) ---
+ipc_mapping_data <- ipc_data_raw %>%
+  # Use the country code column 'iso3' which is the ISO 3-letter code
+  rename(iso3c = iso3) %>%
+  
+  # Focus on the most recent analysis date for each country
+  group_by(iso3c) %>%
+  slice_max(order_by = `Analysis.Date`, n = 1, with_ties = FALSE) %>%
+  ungroup() %>%
+  
+  # Select the relevant food insecurity phase columns
+  # IPC_Phase3_Plus = People in Crisis (Phase 3), Emergency (Phase 4), or Catastrophe/Famine (Phase 5)
+  select(
+    iso3c, 
+    Analysis_Date = `Analysis.Date`,
+    Phase_3_Plus_Pop = `IPC_Phase3_Plus_Population`, # Population in Crisis/Emergency/Famine
+    Phase_5_Pop = `IPC_Phase5_Population`,           # Population in Catastrophe/Famine (highest risk)
+    Overall_Phase = `IPC_Most_Likely_Phase`          # The single highest IPC phase assigned
+  ) %>%
+  # Convert the Overall_Phase to a numeric value for easier mapping:
+  # 1=Minimal, 2=Stressed, 3=Crisis, 4=Emergency, 5=Famine
+  mutate(Overall_Phase_Numeric = as.numeric(gsub("Phase ", "", Overall_Phase))) %>%
+  filter(!is.na(iso3c))
+
+cat("IPC Famine Risk data acquired and prepared.\n")
+print(head(ipc_mapping_data))
+```
+
+3. Final Merged Data Set for Mapping 🗺️
+Finally, you can merge both datasets into one master file using the common iso3c code.
+
+```{r}
+#| error: true
+# --- Combine World Bank and IPC Data ---
+final_mapping_data <- full_join(wb_mapping_data, ipc_mapping_data, by = "iso3c")
+
+# --- Add Country Names for Labeling ---
+# The 'countrycode' package is used here to get the full name from the ISO code
+final_mapping_data <- final_mapping_data %>%
+  mutate(
+    Country_Name = countrycode(iso3c, origin = 'iso3c', destination = 'country.name')
+  ) %>%
+  # Reorder columns for convenience
+  select(iso3c, Country_Name, everything())
+
+cat("\n--- Final Mapping Data Structure ---\n")
+print(head(final_mapping_data))
+print(glimpse(final_mapping_data))
+```
+
+This final final_mapping_data data frame now contains all your requested indicators, uniquely identified by the World Bank's iso3c code, which you can use to join with any standard global shapefile (like those available from rnaturalearth or other mapping packages).
+:::
+
+## File Downloads
+
+These are often the hardest parts to get right and this one was a frustrating mess.  The beauty is that it found the locations and the names and that significantly reduces the task to acquiring the file and importing it.  The search costs were absorbed by the LLM, so all is not lost.
+
+![IPC Map](img/IPCMap.png)
+
+Unfortunately, this file download problem wasn't something Gemini succeeded in resolving.  Fortunately, it supplied a URL and this got me to a very nice web presence achieving what I wanted to see.  [The IPC maps are here.](https://www.ipcinfo.org/ipc-country-analysis/ipc-mapping-tool/)
