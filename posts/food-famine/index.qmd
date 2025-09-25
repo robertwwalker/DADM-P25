@@ -327,7 +327,7 @@ Expenditure_Year	Year of the data for military expenditure.	Year
 
 Export to Sheets
 
-```
+::: {.callout-note}
 Error: World Bank API request failed for indicator MS.MIL.XPND.KD The following message was returned from the server
 
 id: 120
@@ -341,9 +341,9 @@ value: The provided parameter value is not valid
 failed request:
 
 https://api.worldbank.org/v2/en/country/all/indicator/MS.MIL.XPND.KD?date=2019%3A2025&footnote=y&cntrycode=y&per_page=20000&format=json
-```
+:::
 
-
+::: {.callout-warning}
 You've run into another World Bank indicator retirement issue. The indicator MS.MIL.XPND.KD (Military expenditure in constant currency) appears to have been retired or replaced.
 
 I'll update the R script to use the currently valid World Bank indicator for military expenditure in constant currency, which is MS.MIL.XPND.CD (Military expenditure, current USD) combined with NY.GDP.DEFL.ZS (GDP deflator) and PA.NUS.FCRF (Conversion factor) to approximate the constant currency per capita, but since the SIPRI data used by the World Bank often includes a readily available "constant price" measure, a better approach is to check the available World Bank series directly.
@@ -474,7 +474,9 @@ print(head(final_metrics))
 # End of Script
 ```
 
-What did we get?
+:::
+
+### What did we get?
 
 ```{r}
 library(DT)
