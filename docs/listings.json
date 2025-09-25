@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/eurostat-gemini/index.html",
       "/posts/causality/index.html",
       "/posts/week-5/index.html",
       "/posts/Mapmaker/index.html",
