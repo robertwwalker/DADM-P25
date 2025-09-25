@@ -12,6 +12,8 @@ format:
 
 Google gemini is a part of the educational workspaces that the university contracts from Google.  This gives us free access to gemini.  Let's see what it can do.
 
+I know this task can be accomplished via Claude, let's ask Gemini....
+
 ::: {.callout-note}
 ## RWW
 
@@ -202,7 +204,7 @@ Final Filter: The last filter() step removes aggregate codes like EU27_2020 or n
 There is no variable code returned by get_eurostat_dic. can you fix this?
 :::
 
-::: {.callout-tip}
+::: {.callout-tip collapse="true"}
 ## Gemini responds:
 
 You're right! The get_eurostat_dic function returns a data frame where the relevant columns for the code and label are named code and label, respectively, not code and label. I apologize for the error in my previous example. The column names need to be correctly referenced and then renamed for joining.
