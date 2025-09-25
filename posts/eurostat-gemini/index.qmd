@@ -27,7 +27,6 @@ This is a great task for the eurostat R package, which is specifically designed 
 Since Eurostat measures imports of goods into the EU (which are Russia's exports to the EU), the relevant datasets will be for EU imports. The main energy import data sets are nrg_ti_oil (for oil) and nrg_ti_gas (for gas).
 
 Here is the R code to download the imports of natural gas and oil/petroleum products from Russia to individual EU Member States for all available time periods.
-:::
 
 ```{r}
 #| error: true
@@ -159,7 +158,6 @@ print(glimpse(final_data_russia_imports))
 # write.csv(final_data_russia_imports, "russia_energy_imports_eurostat.csv", row.names = FALSE)
 ```
 
-::: {.callout-tip collapse="true"}
 ## Explanation
 install.packages("eurostat"): You need this package to interact with the Eurostat database API.
 
@@ -198,11 +196,7 @@ left_join() merges these full country names into your final dataset.
 Final Filter: The last filter() step removes aggregate codes like EU27_2020 or non-EU countries, focusing the results on individual EU Member States.
 :::
 
-
-
-
-
-::: {.callout-note collapse="true"}
+::: {.callout-note}
 ## RWW
 
 There is no variable code returned by get_eurostat_dic. can you fix this?
@@ -216,7 +210,6 @@ You're right! The get_eurostat_dic function returns a data frame where the relev
 Here is the corrected R code. I have updated the line that fetches and renames the dictionary columns.
 
 Corrected R Code for Eurostat Data Download
-:::
 
 ```{r Try2}
 #| error: true
@@ -331,7 +324,6 @@ print(glimpse(final_data_russia_imports))
 # write.csv(final_data_russia_imports, "russia_energy_imports_eurostat.csv", row.names = FALSE)
 ```
 
-::: {.callout-tip collapse="true"}
 ## Gemini says
 The specific line that addresses your issue is:
 
@@ -361,7 +353,6 @@ You're right, the column names returned by get_eurostat_dic() can sometimes vary
 Here is the fully corrected R code using code_name and full_name for the dictionary columns.
 
 Corrected R Code for Eurostat Data Download
-:::
 
 ```{r}
 #| error: true
@@ -473,7 +464,6 @@ print(glimpse(final_data_russia_imports))
 # write.csv(final_data_russia_imports, "russia_energy_imports_eurostat.csv", row.names = FALSE)
 ```
 
-::: {.callout-tip}
 ## Gemini continues:
 
 The key change is in the line where the dictionary is loaded and renamed:
@@ -486,6 +476,7 @@ geo_labels <- get_eurostat_dic("geo", lang = "en") %>%
 ```
 
 This correctly maps the columns from the dictionary to the column names used in your main energy data, ensuring the left_join() operation works as intended.
+:::
 
 ::: {.callout-note}
 ## RWW
@@ -507,7 +498,6 @@ How can I visualize this data in R?
 ## Gemini responds:
 
 The best way to visualize this data is by using the ggplot2 package, which is the standard for high-quality graphics in R. You can show the shift in imports over time for different countries and energy types.
-:::
 
 Here is the R code to create a clear visualization using the final_data_russia_imports data frame you generated, along with a few common and insightful plot types.
 
@@ -631,3 +621,5 @@ ggplot(latest_year_data, aes(x = country_name, y = annual_total)) +
   ) +
   theme_minimal()
 ```
+
+:::
