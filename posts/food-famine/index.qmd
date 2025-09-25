@@ -479,6 +479,6 @@ What did we get?
 
 ```{r}
 library(DT)
-DT::datatable(final_metrics)
+DT::datatable(final_metrics) %>% formatStyle(names(final_metrics), backgroundColor = "white")
 ```
 
