@@ -4,9 +4,14 @@ author: "Robert W. Walker"
 date: "2025-09-17"
 format: 
    html:
-     theme: superhero
      embed-resources: true
 ---
+
+To start esquisse, it is best to issue `esquisse::esquisser(viewer="browser")`
+
+If not, the RStudio launches a viewer that is small and less versatile and reliable.
+
+If you use the Addins dropdown, it starts in this viewer as opposed to the browser, hence the preference for the above.
 
 ## Selecting Data
 
@@ -22,7 +27,7 @@ format:
 
 ## Stages: 3
 
-![Admit](img/Admit1.png){width=80%}
+![Admit](img/Admit1.png){width=80%}{.preview-image}
 
 ## Stages: 4
 

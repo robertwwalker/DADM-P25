@@ -9,15 +9,15 @@ format:
      scrollable: true
      logo: AGSMlogo.jpeg
      footer: "DADM-Fall 2025"
+     multiplex:
+       url: 'https://multiplex-5adl.onrender.com'
      self-contained: true
      html-math-method: katex
      incremental: true
      slide-number: c/t
      transition: zoom
-     multiplex: true
      preview-links: true
-     code-fold: true
-highlight-style: espresso
+     lightbox: true
 ---
 
 ```{r setup, include=FALSE}
