@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>DADM for Professionals 2025: PDX</title>
+<link>https://robertwwalker.github.io/DADM-P25/</link>
+<atom:link href="https://robertwwalker.github.io/DADM-P25/index.xml" rel="self" type="application/rss+xml"/>
+<description>Data Analysis, Modelling, and Decision Making</description>
+<generator>quarto-1.7.32</generator>
+<lastBuildDate>Thu, 25 Sep 2025 07:00:00 GMT</lastBuildDate>
+<item>
+  <title>{B4F502887207:/posts/food-famine/index.html}</title>
+  <dc:creator>Robert W. Walker</dc:creator>
+  <link>https://robertwwalker.github.io/DADM-P25/posts/food-famine/</link>
+  <description>{B4F502887207:/posts/food-famine/index.html}</description>
+  <guid>https://robertwwalker.github.io/DADM-P25/posts/food-famine/</guid>
+  <pubDate>Thu, 25 Sep 2025 07:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>{B4F502887207:/posts/eurostat-gemini/index.html}</title>
+  <dc:creator>Robert W. Walker</dc:creator>
+  <link>https://robertwwalker.github.io/DADM-P25/posts/eurostat-gemini/</link>
+  <description>{B4F502887207:/posts/eurostat-gemini/index.html}</description>
+  <guid>https://robertwwalker.github.io/DADM-P25/posts/eurostat-gemini/</guid>
+  <pubDate>Thu, 25 Sep 2025 07:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>{B4F502887207:/posts/causality/index.html}</title>
+  <dc:creator>Robert W. Walker</dc:creator>
+  <link>https://robertwwalker.github.io/DADM-P25/posts/causality/</link>
+  <description>{B4F502887207:/posts/causality/index.html}</description>
+  <guid>https://robertwwalker.github.io/DADM-P25/posts/causality/</guid>
+  <pubDate>Wed, 24 Sep 2025 07:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>{B4F502887207:/posts/week-5/index.html}</title>
+  <dc:creator>Robert W. Walker</dc:creator>
+  <link>https://robertwwalker.github.io/DADM-P25/posts/week-5/</link>
+  <description>{B4F502887207:/posts/week-5/index.html}</description>
+  <guid>https://robertwwalker.github.io/DADM-P25/posts/week-5/</guid>
+  <pubDate>Wed, 24 Sep 2025 07:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>{B4F502887207:/posts/Mapmaker/index.html}</title>
+  <dc:creator>Robert W. Walker</dc:creator>
+  <link>https://robertwwalker.github.io/DADM-P25/posts/Mapmaker/</link>
+  <description>{B4F502887207:/posts/Mapmaker/index.html}</description>
+  <guid>https://robertwwalker.github.io/DADM-P25/posts/Mapmaker/</guid>
+  <pubDate>Thu, 18 Sep 2025 07:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>{B4F502887207:/posts/esquisse/index.html}</title>
+  <dc:creator>Robert W. Walker</dc:creator>
+  <link>https://robertwwalker.github.io/DADM-P25/posts/esquisse/</link>
+  <description>{B4F502887207:/posts/esquisse/index.html}</description>
+  <guid>https://robertwwalker.github.io/DADM-P25/posts/esquisse/</guid>
+  <pubDate>Wed, 17 Sep 2025 07:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>{B4F502887207:/posts/joins/index.html}</title>
+  <dc:creator>Robert W. Walker</dc:creator>
+  <link>https://robertwwalker.github.io/DADM-P25/posts/joins/</link>
+  <description>{B4F502887207:/posts/joins/index.html}</description>
+  <guid>https://robertwwalker.github.io/DADM-P25/posts/joins/</guid>
+  <pubDate>Tue, 16 Sep 2025 07:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>
