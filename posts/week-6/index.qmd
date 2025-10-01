@@ -1,0 +1,28 @@
+---
+title: "Week 6: PDX"
+author: "Robert W. Walker"
+date: "2025-10-01"
+---
+
+A link to the slides for the day.
+
+[Slides](https://robertwwalker.github.io/DADM-P25/slides/dadmpdx-gstw2/)
+
+
+## The Abstracted Questions
+
+- What assumptions are required for the pathway? Are they stated or unstated?
+- What does the pathway in question look like?
+- How might we know a pathway is emerging?
+- How do we determine differentiators among pathways?
+- What would we want to measure?
+- What are indicators which help show what direction we are going?
+- What has been missed? Are there overlooked alternatives?
+
+Consider this alongside the idea of claims tied to evidence by warrants with appropriate qualification.
+
+**How might Pearl's ladder of causal thinking influence the warrants that tie data to claims ala Toulmin?** 
+
+## What is the Evidence?
+
+A benchmarking exercise and the University's google gemini.

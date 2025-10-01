@@ -10,7 +10,44 @@
 <atom:link href="https://robertwwalker.github.io/DADM-P25/index.xml" rel="self" type="application/rss+xml"/>
 <description>Data Analysis, Modelling, and Decision Making</description>
 <generator>quarto-1.7.32</generator>
-<lastBuildDate>Thu, 25 Sep 2025 07:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 01 Oct 2025 07:00:00 GMT</lastBuildDate>
+<item>
+  <title>Week 6: PDX</title>
+  <dc:creator>Robert W. Walker</dc:creator>
+  <link>https://robertwwalker.github.io/DADM-P25/posts/week-6/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>A link to the slides for the day.</p>
+<p><a href="https://robertwwalker.github.io/DADM-P25/slides/dadmpdx-gstw2/">Slides</a></p>
+<section id="the-abstracted-questions" class="level2">
+<h2 class="anchored" data-anchor-id="the-abstracted-questions">The Abstracted Questions</h2>
+<ul>
+<li>What assumptions are required for the pathway? Are they stated or unstated?</li>
+<li>What does the pathway in question look like?</li>
+<li>How might we know a pathway is emerging?</li>
+<li>How do we determine differentiators among pathways?</li>
+<li>What would we want to measure?</li>
+<li>What are indicators which help show what direction we are going?</li>
+<li>What has been missed? Are there overlooked alternatives?</li>
+</ul>
+<p>Consider this alongside the idea of claims tied to evidence by warrants with appropriate qualification.</p>
+<p><strong>How might Pearl’s ladder of causal thinking influence the warrants that tie data to claims ala Toulmin?</strong></p>
+</section>
+<section id="what-is-the-evidence" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-the-evidence">What is the Evidence?</h2>
+<p>A benchmarking exercise and the University’s google gemini.</p>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://robertwwalker.github.io/DADM-P25/posts/week-6/</guid>
+  <pubDate>Wed, 01 Oct 2025 07:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Gemini for Data on Hunger</title>
   <dc:creator>Robert W. Walker</dc:creator>
