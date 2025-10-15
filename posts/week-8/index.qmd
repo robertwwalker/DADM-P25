@@ -1,0 +1,11 @@
+---
+title: "Week 8: PDX"
+author: "Robert W. Walker"
+date: "2025-10-15"
+---
+
+A link to the slides for the day.
+
+[Slides](https://robertwwalker.github.io/DADM-P25/slides/week-8/index.html)
+
+[A chat with Gemini to add to and refine my thinking](https://docs.google.com/document/d/1Ae0nv5sUr3Yj4SI4UhXG2DidODZFnfqTDse6SsmBBc8/edit?usp=sharing)

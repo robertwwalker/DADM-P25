@@ -10,7 +10,27 @@
 <atom:link href="https://robertwwalker.github.io/DADM-P25/index.xml" rel="self" type="application/rss+xml"/>
 <description>Data Analysis, Modelling, and Decision Making</description>
 <generator>quarto-1.7.32</generator>
-<lastBuildDate>Wed, 01 Oct 2025 07:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 15 Oct 2025 07:00:00 GMT</lastBuildDate>
+<item>
+  <title>Week 8: PDX</title>
+  <dc:creator>Robert W. Walker</dc:creator>
+  <link>https://robertwwalker.github.io/DADM-P25/posts/week-8/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>A link to the slides for the day.</p>
+<p><a href="https://robertwwalker.github.io/DADM-P25/slides/week-8/index.html">Slides</a></p>
+<p><a href="https://docs.google.com/document/d/1Ae0nv5sUr3Yj4SI4UhXG2DidODZFnfqTDse6SsmBBc8/edit?usp=sharing">A chat with Gemini to add to and refine my thinking</a></p>
+
+
+
+ ]]></description>
+  <guid>https://robertwwalker.github.io/DADM-P25/posts/week-8/</guid>
+  <pubDate>Wed, 15 Oct 2025 07:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Week 6: PDX</title>
   <dc:creator>Robert W. Walker</dc:creator>
