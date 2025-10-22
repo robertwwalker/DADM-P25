@@ -13,6 +13,7 @@ Two links:
 
 - [Kant and Pearl](https://x.com/soboleffspaces/status/1979988518442311749?s=46)
 - [Worries about Agentic AI](https://x.com/brave/status/1980667345317286293?s=46)
+- [LLM Brain Rot](https://llm-brain-rot.github.io/)
 
 # Probability and Probability Distributions
 
