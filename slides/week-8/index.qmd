@@ -1,5 +1,5 @@
 ---
-title: "Global Strategic Trends: Evaluaton and Articulation"
+title: "Global Strategic Trends: Evaluation and Articulation"
 subtitle: "Global Strategic Trends, Discussion"  
 author: "Robert W. Walker"
 date: '`r Sys.Date()`'

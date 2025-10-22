@@ -2011,7 +2011,7 @@
     "href": "slides/week-9/index.html#z-and-symmetry",
     "title": "Probability Distributions",
     "section": "Z and symmetry",
-    "text": "Z and symmetry\nz is an easy way to assess symmetry.\n\nThe mean of z is always zero but the distribution of z to the left and right of zero is informative. If they are roughly even, then symmetry is likely.\n\nIf the signs are uneven, then symmetry is unlikely.\n\nIn R, z is automated with the scale() command. The last line uses a table and the sign command to show the positive and negative z.\n\n\n\n\n# Generate random normal income\nDataF &lt;- data.frame(Hypo.Income = rnorm(1000, 55000, 10000)) %&gt;%\n# z-transform income [mean 55000ish, std. dev. 10000ish]\nmutate(z.Income = scale(Hypo.Income))\n# Show the data.frame\nhead(DataF)\ntable(sign(DataF$z.Income))\n\n\n\n\n  Hypo.Income    z.Income\n1    55034.13 -0.02538003\n2    34165.59 -2.11741143\n3    53405.42 -0.18865521\n4    72947.67  1.77041777\n5    69901.37  1.46503258\n6    52082.66 -0.32125950\n\n\n\n -1   1 \n497 503",
+    "text": "Z and symmetry\nz is an easy way to assess symmetry.\n\nThe mean of z is always zero but the distribution of z to the left and right of zero is informative. If they are roughly even, then symmetry is likely.\n\nIf the signs are uneven, then symmetry is unlikely.\n\nIn R, z is automated with the scale() command. The last line uses a table and the sign command to show the positive and negative z.\n\n\n\n\n# Generate random normal income\nDataF &lt;- data.frame(Hypo.Income = rnorm(1000, 55000, 10000)) %&gt;%\n# z-transform income [mean 55000ish, std. dev. 10000ish]\nmutate(z.Income = scale(Hypo.Income))\n# Show the data.frame\nhead(DataF)\ntable(sign(DataF$z.Income))\n\n\n\n\n  Hypo.Income    z.Income\n1    65512.47  1.09176480\n2    66267.30  1.17024288\n3    68099.18  1.36069793\n4    65869.11  1.12884390\n5    54852.40 -0.01653551\n6    65060.76  1.04480131\n\n\n\n -1   1 \n512 488",
     "crumbs": [
       "About",
       "Slides",
@@ -2633,241 +2633,241 @@
   {
     "objectID": "slides/week-8/index.html#a-first-note-questions-on-the-assignment",
     "href": "slides/week-8/index.html#a-first-note-questions-on-the-assignment",
-    "title": "Global Strategic Trends: Evaluaton and Articulation",
+    "title": "Global Strategic Trends: Evaluation and Articulation",
     "section": "A First Note: Questions on the Assignment",
     "text": "A First Note: Questions on the Assignment",
     "crumbs": [
       "About",
       "Slides",
-      "Global Strategic Trends: Evaluaton and Articulation"
+      "Global Strategic Trends: Evaluation and Articulation"
     ]
   },
   {
     "objectID": "slides/week-8/index.html#a-first-topic-what-is-the-scientific-method",
     "href": "slides/week-8/index.html#a-first-topic-what-is-the-scientific-method",
-    "title": "Global Strategic Trends: Evaluaton and Articulation",
+    "title": "Global Strategic Trends: Evaluation and Articulation",
     "section": "A First Topic: What is the Scientific Method?",
     "text": "A First Topic: What is the Scientific Method?",
     "crumbs": [
       "About",
       "Slides",
-      "Global Strategic Trends: Evaluaton and Articulation"
+      "Global Strategic Trends: Evaluation and Articulation"
     ]
   },
   {
     "objectID": "slides/week-8/index.html#discussion-items",
     "href": "slides/week-8/index.html#discussion-items",
-    "title": "Global Strategic Trends: Evaluaton and Articulation",
+    "title": "Global Strategic Trends: Evaluation and Articulation",
     "section": "Discussion Items",
     "text": "Discussion Items\nThe aforementioned is one example of a through-line. Also, we should never forget this is an inherently British assessment.\n\nWhat assumptions are required for the pathway? Are they stated or unstated?\nWhat does the pathway in question look like?\nHow might we know a pathway is emerging?\nHow do we determine differentiators among pathways?\nWhat would we want to measure?\nWhat are indicators which help show what direction we are going?\nWhat has been missed? Are there overlooked alternatives?\n\nConsider this alongside the idea of claims tied to evidence by warrants with appropriate qualification.",
     "crumbs": [
       "About",
       "Slides",
-      "Global Strategic Trends: Evaluaton and Articulation"
+      "Global Strategic Trends: Evaluation and Articulation"
     ]
   },
   {
     "objectID": "slides/week-8/index.html#a-deliverable",
     "href": "slides/week-8/index.html#a-deliverable",
-    "title": "Global Strategic Trends: Evaluaton and Articulation",
+    "title": "Global Strategic Trends: Evaluation and Articulation",
     "section": "A Deliverable",
     "text": "A Deliverable\nFormalizing the aforementioned into at least a nine point monitoring plan with specifics on the whats and whys. Measures? How do values map to judgements/claims?",
     "crumbs": [
       "About",
       "Slides",
-      "Global Strategic Trends: Evaluaton and Articulation"
+      "Global Strategic Trends: Evaluation and Articulation"
     ]
   },
   {
     "objectID": "slides/week-8/index.html#regions",
     "href": "slides/week-8/index.html#regions",
-    "title": "Global Strategic Trends: Evaluaton and Articulation",
+    "title": "Global Strategic Trends: Evaluation and Articulation",
     "section": "Regions",
     "text": "Regions\n\nESASSEASCASSWASAFRRUSEURCACNA\n\n\n\n\n\nMapESA\n\n\n\n\n\n\n\nMapSEA\n\n\n\n\n\n\n\nMapCA\n\n\n\n\n\n\n\nMapSWA\n\n\n\n\n\n\n\nMapAFR\n\n\n\n\n\n\n\nMapRUS\n\n\n\n\n\n\n\nPopEUR\n\n\n\n\n\n\n\nMapCAC\n\n\n\n\n\n\n\nMapNA",
     "crumbs": [
       "About",
       "Slides",
-      "Global Strategic Trends: Evaluaton and Articulation"
+      "Global Strategic Trends: Evaluation and Articulation"
     ]
   },
   {
     "objectID": "slides/week-8/index.html#three-areas",
     "href": "slides/week-8/index.html#three-areas",
-    "title": "Global Strategic Trends: Evaluaton and Articulation",
+    "title": "Global Strategic Trends: Evaluation and Articulation",
     "section": "Three Areas",
     "text": "Three Areas\n\nDemographic Breakdown\nDigital Usage\nClimate, or ….",
     "crumbs": [
       "About",
       "Slides",
-      "Global Strategic Trends: Evaluaton and Articulation"
+      "Global Strategic Trends: Evaluation and Articulation"
     ]
   },
   {
     "objectID": "slides/week-8/index.html#demographics",
     "href": "slides/week-8/index.html#demographics",
-    "title": "Global Strategic Trends: Evaluaton and Articulation",
+    "title": "Global Strategic Trends: Evaluation and Articulation",
     "section": "Demographics",
     "text": "Demographics\n\nESASSEASCASSWASAFRRUSEURCACNA\n\n\n\n\n\nPopESA\n\n\n\n\n\n\n\nPopSEA\n\n\n\n\n\n\n\nPopCA\n\n\n\n\n\n\n\nPopSWA\n\n\n\n\n\n\n\nPopAFR\n\n\n\n\n\n\n\nPopRUS\n\n\n\n\n\n\n\nPopEUR\n\n\n\n\n\n\n\nPopCAC\n\n\n\n\n\n\n\nPopNA",
     "crumbs": [
       "About",
       "Slides",
-      "Global Strategic Trends: Evaluaton and Articulation"
+      "Global Strategic Trends: Evaluation and Articulation"
     ]
   },
   {
     "objectID": "slides/week-8/index.html#digital",
     "href": "slides/week-8/index.html#digital",
-    "title": "Global Strategic Trends: Evaluaton and Articulation",
+    "title": "Global Strategic Trends: Evaluation and Articulation",
     "section": "Digital",
     "text": "Digital\n\nESASSEASCASSWASAFRRUSEURCACNA\n\n\n\n\n\nDigESA\n\n\n\n\n\n\n\nDigSEA\n\n\n\n\n\n\n\nDigCA\n\n\n\n\n\n\n\nDigSWA\n\n\n\n\n\n\n\nDigAFR\n\n\n\n\n\n\n\nDigRUS\n\n\n\n\n\n\n\nDigEUR\n\n\n\n\n\n\n\nDigCAC\n\n\n\n\n\n\n\nDigNA",
     "crumbs": [
       "About",
       "Slides",
-      "Global Strategic Trends: Evaluaton and Articulation"
+      "Global Strategic Trends: Evaluation and Articulation"
     ]
   },
   {
     "objectID": "slides/week-8/index.html#third-thing",
     "href": "slides/week-8/index.html#third-thing",
-    "title": "Global Strategic Trends: Evaluaton and Articulation",
+    "title": "Global Strategic Trends: Evaluation and Articulation",
     "section": "Third Thing",
     "text": "Third Thing\n\nESASSEASCASSWASAFRRUSEURCACNA\n\n\n\n\n\nClimateESA\n\n\n\n\n\n\n\nClimateSEA\n\n\n\n\n\n\n\nClimateCA\n\n\n\n\n\n\n\nClimateSWA\n\n\n\n\n\n\n\nEnerAFR\n\n\n\n\n\n\n\nWheatRUS\n\n\n\n\n\n\n\nMigEUR\n\n\n\n\n\n\n\nClimCAC\n\n\n\n\n\n\n\nDrugsNA",
     "crumbs": [
       "About",
       "Slides",
-      "Global Strategic Trends: Evaluaton and Articulation"
+      "Global Strategic Trends: Evaluation and Articulation"
     ]
   },
   {
     "objectID": "slides/week-8/index.html#the-arctic",
     "href": "slides/week-8/index.html#the-arctic",
-    "title": "Global Strategic Trends: Evaluaton and Articulation",
+    "title": "Global Strategic Trends: Evaluation and Articulation",
     "section": "The Arctic",
     "text": "The Arctic\n\nClaimsOil/GasShips\n\n\n\n\n\nClaims\n\n\n\n\n\n\n\nOil/Gas\n\n\n\n\n\n\n\nShips",
     "crumbs": [
       "About",
       "Slides",
-      "Global Strategic Trends: Evaluaton and Articulation"
+      "Global Strategic Trends: Evaluation and Articulation"
     ]
   },
   {
     "objectID": "slides/week-8/index.html#antarctica",
     "href": "slides/week-8/index.html#antarctica",
-    "title": "Global Strategic Trends: Evaluaton and Articulation",
+    "title": "Global Strategic Trends: Evaluation and Articulation",
     "section": "Antarctica",
     "text": "Antarctica\n\nClaimsTourism\n\n\n\n\n\nClaims\n\n\n\n\n\n\n\nTourism",
     "crumbs": [
       "About",
       "Slides",
-      "Global Strategic Trends: Evaluaton and Articulation"
+      "Global Strategic Trends: Evaluation and Articulation"
     ]
   },
   {
     "objectID": "slides/week-8/index.html#the-oceans-1",
     "href": "slides/week-8/index.html#the-oceans-1",
-    "title": "Global Strategic Trends: Evaluaton and Articulation",
+    "title": "Global Strategic Trends: Evaluation and Articulation",
     "section": "The Oceans",
     "text": "The Oceans\n\nLevel RiseUndiscoveredExploration\n\n\n\n\n\nLevels\n\n\n\n\n\n\n\nOil/Gas\n\n\n\n\n\n\n\nPermits",
     "crumbs": [
       "About",
       "Slides",
-      "Global Strategic Trends: Evaluaton and Articulation"
+      "Global Strategic Trends: Evaluation and Articulation"
     ]
   },
   {
     "objectID": "slides/week-8/index.html#spaceorbits",
     "href": "slides/week-8/index.html#spaceorbits",
-    "title": "Global Strategic Trends: Evaluaton and Articulation",
+    "title": "Global Strategic Trends: Evaluation and Articulation",
     "section": "Space/Orbits",
     "text": "Space/Orbits\n\nMapCompaniesSatellites\n\n\n\n\n\nOrbits\n\n\n\n\n\n\n\nCompanies\n\n\n\n\n\n\n\nSatellites",
     "crumbs": [
       "About",
       "Slides",
-      "Global Strategic Trends: Evaluaton and Articulation"
+      "Global Strategic Trends: Evaluation and Articulation"
     ]
   },
   {
     "objectID": "slides/week-8/index.html#cyberspace-1",
     "href": "slides/week-8/index.html#cyberspace-1",
-    "title": "Global Strategic Trends: Evaluaton and Articulation",
+    "title": "Global Strategic Trends: Evaluation and Articulation",
     "section": "Cyberspace",
     "text": "Cyberspace\n\nUsageCompaniesCyberwar\n\n\n\n\n\nUsage\n\n\n\n\n\n\n\nInformation\n\n\n\n\n\n\n\nIncidents",
     "crumbs": [
       "About",
       "Slides",
-      "Global Strategic Trends: Evaluaton and Articulation"
+      "Global Strategic Trends: Evaluation and Articulation"
     ]
   },
   {
     "objectID": "slides/week-8/index.html#themes-1",
     "href": "slides/week-8/index.html#themes-1",
-    "title": "Global Strategic Trends: Evaluaton and Articulation",
+    "title": "Global Strategic Trends: Evaluation and Articulation",
     "section": "Themes",
     "text": "Themes",
     "crumbs": [
       "About",
       "Slides",
-      "Global Strategic Trends: Evaluaton and Articulation"
+      "Global Strategic Trends: Evaluation and Articulation"
     ]
   },
   {
     "objectID": "slides/week-8/index.html#society",
     "href": "slides/week-8/index.html#society",
-    "title": "Global Strategic Trends: Evaluaton and Articulation",
+    "title": "Global Strategic Trends: Evaluation and Articulation",
     "section": "Society",
     "text": "Society\n\nDemographyUrbanisationReligions\n\n\n\n\n\nPop Dist\n\n\n\n\n\n\n\nUrbans\n\n\n\n\n\n\n\nWorld Religions",
     "crumbs": [
       "About",
       "Slides",
-      "Global Strategic Trends: Evaluaton and Articulation"
+      "Global Strategic Trends: Evaluation and Articulation"
     ]
   },
   {
     "objectID": "slides/week-8/index.html#economics",
     "href": "slides/week-8/index.html#economics",
-    "title": "Global Strategic Trends: Evaluaton and Articulation",
+    "title": "Global Strategic Trends: Evaluation and Articulation",
     "section": "Economics",
     "text": "Economics\n\nGDPs/CompaniesEmployment\n\n\n\n\n\nGDP/MC\n\n\n\n\n\n\n\nEmployment",
     "crumbs": [
       "About",
       "Slides",
-      "Global Strategic Trends: Evaluaton and Articulation"
+      "Global Strategic Trends: Evaluation and Articulation"
     ]
   },
   {
     "objectID": "slides/week-8/index.html#environmental-concerns",
     "href": "slides/week-8/index.html#environmental-concerns",
-    "title": "Global Strategic Trends: Evaluaton and Articulation",
+    "title": "Global Strategic Trends: Evaluation and Articulation",
     "section": "Environmental Concerns",
     "text": "Environmental Concerns\n\nTemperaturesPower\n\n\n\n\n\nGlobal Temps\n\n\n\n\n\n\n\nEnergy",
     "crumbs": [
       "About",
       "Slides",
-      "Global Strategic Trends: Evaluaton and Articulation"
+      "Global Strategic Trends: Evaluation and Articulation"
     ]
   },
   {
     "objectID": "slides/week-8/index.html#info-tech",
     "href": "slides/week-8/index.html#info-tech",
-    "title": "Global Strategic Trends: Evaluaton and Articulation",
+    "title": "Global Strategic Trends: Evaluation and Articulation",
     "section": "Info Tech",
     "text": "Info Tech\n\nTransportDeath\n\n\n\n\n\nGlobal Transport\n\n\n\n\n\n\n\nCauses",
     "crumbs": [
       "About",
       "Slides",
-      "Global Strategic Trends: Evaluaton and Articulation"
+      "Global Strategic Trends: Evaluation and Articulation"
     ]
   },
   {
     "objectID": "slides/week-8/index.html#conflict-and-security-1",
     "href": "slides/week-8/index.html#conflict-and-security-1",
-    "title": "Global Strategic Trends: Evaluaton and Articulation",
+    "title": "Global Strategic Trends: Evaluation and Articulation",
     "section": "Conflict and Security",
     "text": "Conflict and Security\n\nMilitary ExpendituresRare Earths\n\n\n\n\n\nRegional Spend\n\n\n\n\n\n\n\nMinerals",
     "crumbs": [
       "About",
       "Slides",
-      "Global Strategic Trends: Evaluaton and Articulation"
+      "Global Strategic Trends: Evaluation and Articulation"
     ]
   }
 ]
