@@ -647,34 +647,16 @@ To this point, the distributions are assumed.  These are assumptions we make to 
 
 The remainder of the term will take data as given and begin a process known as statistical learning using the core insight that probability distributions, and uncertainty, abound.
 
-## A Calibration Example
+## Revisiting a Homework Problem {background-image="img/RadiantSimulate.png" background-size="contain"}
 
-This example focuses on calories from FastFood.
+Model.  
+Simulation.  
+Three Binomials.  
+(0.8) Good working order.  
+(0.1) Wearing Down.  
+(0.1) In Need of Repair.  
+Add each.  
+Simulate.  
 
-First, provide a summary of the mean, standard deviation, and 25th and 75th percentiles of calories for each restaurant chain in the data.
-
-Second, visualize these data using some appropriate visualization method and intepret the relevant visual.
-
-Third, firms are ranked according to the National Institute of Fast Food as Pure Calories evaluates the 75th percentile of menu offerings and ranks the chains from top as 1 to bottom.  What are their rankings?
-
-The rest....
-Suppose that calories from Mcdonalds items are said to follow a normal distribution, with mean and standard deviation exactly following the observed data.
-
-1. What are those values, mean and standard deviation?
-
-2. Provide a plot of the distribution that those values and the assumption imply.
-
-3. Provide a plot of the actual data on calories.  Does this assumption seem reasonable?  Do the data seem symmetric?
-
-4. Given this information so far, would calories best be described by a mean and standard deviation or by a five-number summary?  How should symmetry weigh into your decision?
-
-5. Provide that summary if you have not already.
-
-6. There is one very large value in the observed data.  What is the item?  Use your normal distribution from question 2 to calculate how likely an item of that many calories or more should occur given the distribution.  What is the z-score for that item?  What does this mean?
-
-7. Assuming the normal, as given in 1 and 2
-+ what is the probability of items between 300 and 675 calories?
-+ what range of calories represent the middle 60% of values?
-+ how likely are items over 1500 calories?
 
 # To Inference

@@ -2011,7 +2011,7 @@
     "href": "slides/week-9/index.html#z-and-symmetry",
     "title": "Probability Distributions",
     "section": "Z and symmetry",
-    "text": "Z and symmetry\nz is an easy way to assess symmetry.\n\nThe mean of z is always zero but the distribution of z to the left and right of zero is informative. If they are roughly even, then symmetry is likely.\n\nIf the signs are uneven, then symmetry is unlikely.\n\nIn R, z is automated with the scale() command. The last line uses a table and the sign command to show the positive and negative z.\n\n\n\n\n# Generate random normal income\nDataF &lt;- data.frame(Hypo.Income = rnorm(1000, 55000, 10000)) %&gt;%\n# z-transform income [mean 55000ish, std. dev. 10000ish]\nmutate(z.Income = scale(Hypo.Income))\n# Show the data.frame\nhead(DataF)\ntable(sign(DataF$z.Income))\n\n\n\n\n  Hypo.Income    z.Income\n1    73626.33  1.81956618\n2    49206.57 -0.53958550\n3    55758.66  0.09340074\n4    58992.11  0.40577918\n5    52939.16 -0.17898625\n6    72299.42  1.69137653\n\n\n\n -1   1 \n491 509",
+    "text": "Z and symmetry\nz is an easy way to assess symmetry.\n\nThe mean of z is always zero but the distribution of z to the left and right of zero is informative. If they are roughly even, then symmetry is likely.\n\nIf the signs are uneven, then symmetry is unlikely.\n\nIn R, z is automated with the scale() command. The last line uses a table and the sign command to show the positive and negative z.\n\n\n\n\n# Generate random normal income\nDataF &lt;- data.frame(Hypo.Income = rnorm(1000, 55000, 10000)) %&gt;%\n# z-transform income [mean 55000ish, std. dev. 10000ish]\nmutate(z.Income = scale(Hypo.Income))\n# Show the data.frame\nhead(DataF)\ntable(sign(DataF$z.Income))\n\n\n\n\n  Hypo.Income   z.Income\n1    54197.04 -0.1013282\n2    37327.12 -1.7850723\n3    70131.00  1.4889988\n4    43657.41 -1.1532620\n5    50537.91 -0.4665369\n6    69567.57  1.4327643\n\n\n\n -1   1 \n512 488",
     "crumbs": [
       "About",
       "Slides",
@@ -2868,6 +2868,18 @@
       "About",
       "Slides",
       "Global Strategic Trends: Evaluation and Articulation"
+    ]
+  },
+  {
+    "objectID": "slides/week-9/index.html#revisiting-a-homework-problem",
+    "href": "slides/week-9/index.html#revisiting-a-homework-problem",
+    "title": "Probability Distributions",
+    "section": "Revisiting a Homework Problem",
+    "text": "Revisiting a Homework Problem\nModel.\nSimulation.\nThree Binomials.\n(0.8) Good working order.\n(0.1) Wearing Down.\n(0.1) In Need of Repair.\nAdd each.\nSimulate.",
+    "crumbs": [
+      "About",
+      "Slides",
+      "Probability Distributions"
     ]
   }
 ]
