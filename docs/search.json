@@ -2011,7 +2011,7 @@
     "href": "slides/week-9/index.html#z-and-symmetry",
     "title": "Probability Distributions",
     "section": "Z and symmetry",
-    "text": "Z and symmetry\nz is an easy way to assess symmetry.\n\nThe mean of z is always zero but the distribution of z to the left and right of zero is informative. If they are roughly even, then symmetry is likely.\n\nIf the signs are uneven, then symmetry is unlikely.\n\nIn R, z is automated with the scale() command. The last line uses a table and the sign command to show the positive and negative z.\n\n\n\n\n# Generate random normal income\nDataF &lt;- data.frame(Hypo.Income = rnorm(1000, 55000, 10000)) %&gt;%\n# z-transform income [mean 55000ish, std. dev. 10000ish]\nmutate(z.Income = scale(Hypo.Income))\n# Show the data.frame\nhead(DataF)\ntable(sign(DataF$z.Income))\n\n\n\n\n  Hypo.Income   z.Income\n1    40551.83 -1.4563972\n2    57046.05  0.1868391\n3    59334.16  0.4147917\n4    48673.58 -0.6472683\n5    57547.46  0.2367919\n6    73294.96  1.8056360\n\n\n\n -1   1 \n496 504",
+    "text": "Z and symmetry\nz is an easy way to assess symmetry.\n\nThe mean of z is always zero but the distribution of z to the left and right of zero is informative. If they are roughly even, then symmetry is likely.\n\nIf the signs are uneven, then symmetry is unlikely.\n\nIn R, z is automated with the scale() command. The last line uses a table and the sign command to show the positive and negative z.\n\n\n\n\n# Generate random normal income\nDataF &lt;- data.frame(Hypo.Income = rnorm(1000, 55000, 10000)) %&gt;%\n# z-transform income [mean 55000ish, std. dev. 10000ish]\nmutate(z.Income = scale(Hypo.Income))\n# Show the data.frame\nhead(DataF)\ntable(sign(DataF$z.Income))\n\n\n\n\n  Hypo.Income   z.Income\n1    33319.80 -2.2180312\n2    54866.67  0.0027549\n3    43066.27 -1.2134850\n4    65999.92  1.1502327\n5    38390.77 -1.6953783\n6    39865.67 -1.5433633\n\n\n\n -1   1 \n499 501",
     "crumbs": [
       "About",
       "Slides",
@@ -2071,7 +2071,7 @@
     "href": "slides/week-9/index.html#the-binomial",
     "title": "Probability Distributions",
     "section": "The Binomial",
-    "text": "The Binomial\n\nBinomialR",
+    "text": "The Binomial\n\n\n\nBinomialR",
     "crumbs": [
       "About",
       "Slides",
@@ -2203,7 +2203,7 @@
     "href": "slides/week-9/index.html#events-the-poisson",
     "title": "Probability Distributions",
     "section": "Events: The Poisson",
-    "text": "Events: The Poisson\n\nPoissonTake a binomial with p very small and let n \\rightarrow \\infty. We get the Poisson distribution (y) given an arrival rate \\lambda specified in events per period.\nf(y|\\lambda) = \\frac{\\lambda^{y}e^{-\\lambda}}{y!}",
+    "text": "Events: The Poisson\n\n\n\nPoisson\n\n\nTake a binomial with p very small and let n \\rightarrow \\infty. We get the Poisson distribution (y) given an arrival rate \\lambda specified in events per period.\nf(y|\\lambda) = \\frac{\\lambda^{y}e^{-\\lambda}}{y!}",
     "crumbs": [
       "About",
       "Slides",
