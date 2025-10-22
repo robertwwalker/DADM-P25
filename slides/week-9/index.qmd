@@ -11,7 +11,7 @@ format:
      footer: "DADM-P25 Probability Distributions"
      self-contained: true
      multiplex:
-        url: 'https://multiplex-5adl.onrender.com'
+        url: 'https://multiplex-5adl.onrender.com:10000'
      html-math-method: katex
      incremental: true
      slide-number: c/t
