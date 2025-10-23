@@ -12,6 +12,11 @@ options(htmltools.dir.version = FALSE)
 load("./ProbData.RData")
 ```
 
+The document can be directly [linked in a Tufte book form.](img/data-examples.html).  The quarto rendering here is not perfect.
+
+The document can also be directly [linked as a Tufte html document](img/Tufte2.html).
+
+
 ## Question 1
 
 1.	A machine produces defective parts with probabilities that depend on the state of repair. If the machine is in good working order, it produces defective parts with probability 0.02. If the machine is wearing down, it produces defective parts 10% of the time. If the machine is in need of repairs, then it produces defective parts 30% of the time. The probability that the machine is in good working order is 0.8; the probability that the machine is wearing down or in need of repair is 0.1 (for each).
