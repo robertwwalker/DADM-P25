@@ -288,8 +288,9 @@ summary(result, type = "probs")
 plot(result, type = "probs")
 ```
 
+## Michelin and Normals
 
-3.  Use R to produce a graphic of the Normal($\mu$ = 96,000, $\sigma$ =
+3.  Graph the Michelin-calibrated Normal($\mu$ = 96,000, $\sigma$ =
     12,000). Use the Empirical Rule to establish approximate 95%
     tolerance intervals for tire life; that is, to establish an
     approximate range into which 95% of tire lives are expected to fall.
@@ -307,8 +308,9 @@ summary(result)
 plot(result)
 ```
 
+## A Calibrated Warranty
 
-5.  Suppose that Michelin management would like to set the mileage
+Suppose that Michelin management would like to set the mileage
     warranty level so that no more than 0.5 percent of the tires will
     fail to meet the warranted mileage (probability of failure 0.005,)
     What should the warranted mileage be, to the nearest 1000 miles?  65000
@@ -319,6 +321,11 @@ summary(result, type = "probs")
 plot(result, type = "probs")
 ```
 
+
+## An Aside on the Lognormal and Black-Scholes-Merton
+
+- Prices must be positive.
+- Logarithms and cumulative returns.
 
 # Discrete Distributions
 

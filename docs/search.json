@@ -2011,7 +2011,7 @@
     "href": "slides/week-9/index.html#z-and-symmetry",
     "title": "Probability Distributions",
     "section": "Z and symmetry",
-    "text": "Z and symmetry\nz is an easy way to assess symmetry.\n\nThe mean of z is always zero but the distribution of z to the left and right of zero is informative. If they are roughly even, then symmetry is likely.\n\nIf the signs are uneven, then symmetry is unlikely.\n\nIn R, z is automated with the scale() command. The last line uses a table and the sign command to show the positive and negative z.\n\n\n\n\n# Generate random normal income\nDataF &lt;- data.frame(Hypo.Income = rnorm(1000, 55000, 10000)) %&gt;%\n# z-transform income [mean 55000ish, std. dev. 10000ish]\nmutate(z.Income = scale(Hypo.Income))\n# Show the data.frame\nhead(DataF)\ntable(sign(DataF$z.Income))\n\n\n\n\n  Hypo.Income   z.Income\n1    54197.04 -0.1013282\n2    37327.12 -1.7850723\n3    70131.00  1.4889988\n4    43657.41 -1.1532620\n5    50537.91 -0.4665369\n6    69567.57  1.4327643\n\n\n\n -1   1 \n512 488",
+    "text": "Z and symmetry\nz is an easy way to assess symmetry.\n\nThe mean of z is always zero but the distribution of z to the left and right of zero is informative. If they are roughly even, then symmetry is likely.\n\nIf the signs are uneven, then symmetry is unlikely.\n\nIn R, z is automated with the scale() command. The last line uses a table and the sign command to show the positive and negative z.\n\n\n\n\n# Generate random normal income\nDataF &lt;- data.frame(Hypo.Income = rnorm(1000, 55000, 10000)) %&gt;%\n# z-transform income [mean 55000ish, std. dev. 10000ish]\nmutate(z.Income = scale(Hypo.Income))\n# Show the data.frame\nhead(DataF)\ntable(sign(DataF$z.Income))\n\n\n\n\n  Hypo.Income   z.Income\n1    50716.60 -0.4361144\n2    43901.14 -1.1141481\n3    64990.12  0.9838822\n4    69892.07  1.4715509\n5    43373.37 -1.1666534\n6    58250.72  0.3134157\n\n\n\n -1   1 \n501 499",
     "crumbs": [
       "About",
       "Slides",
@@ -2047,7 +2047,7 @@
     "href": "slides/week-9/index.html#problem-4-normal",
     "title": "Probability Distributions",
     "section": "Problem 4 [Normal]",
-    "text": "Problem 4 [Normal]\nThe Michelin tire company has developed a revolutionary new type of steel-belted radial tire. After extensive testing, the population of tire lives is believed to be well represented by a normal distribution with mean tire life \\mu = 96,000 miles and standard deviation \\sigma = 12,000 miles. The company plans to offer a warranty providing for replacement tires if the original tires fail to last through the warranty period. Before embarking on an in-depth analysis of the warranty problem, we will first warm up with a few standard normal probability calculations.\n\nFind the probability that a standard (mean zero, standard deviation one) normal random variable assumes a value between -0.89 and 1.13.\n\n\nresult &lt;- radiant.basics::prob_norm(mean = 0, stdev = 1, lb = -0.89, ub = 1.13)\nsummary(result)\n\nProbability calculator\nDistribution: Normal\nMean        : 0 \nSt. dev     : 1 \nLower bound : -0.89 \nUpper bound : 1.13 \n\nP(X &lt; -0.89) = 0.187\nP(X &gt; -0.89) = 0.813\nP(X &lt; 1.13) = 0.871\nP(X &gt; 1.13) = 0.129\nP(-0.89 &lt; X &lt; 1.13)     = 0.684\n1 - P(-0.89 &lt; X &lt; 1.13) = 0.316\n\nplot(result)\n\n\n\n\n\n\n\n\n\nApproximate the value of z such that the probability of a standard normal random variable falling in the interval [0, z] is 0.495; that is, such that Pr(0 &lt; Z &lt; z) = 0.495.\n\n\nresult &lt;- radiant.basics::prob_norm(mean = 0, stdev = 1, plb = 0.5, pub = 0.995)\nsummary(result, type = \"probs\")\n\nProbability calculator\nDistribution: Normal\nMean        : 0 \nSt. dev     : 1 \nLower bound : 0.5 \nUpper bound : 0.995 \n\nP(X &lt; 0) = 0.5\nP(X &gt; 0) = 0.5\nP(X &lt; 2.576) = 0.995\nP(X &gt; 2.576) = 0.005\nP(0 &lt; X &lt; 2.576)     = 0.495\n1 - P(0 &lt; X &lt; 2.576) = 0.505\n\nplot(result, type = \"probs\")\n\n\n\n\n\n\n\n\n\nUse R to produce a graphic of the Normal(\\mu = 96,000, \\sigma = 12,000). Use the Empirical Rule to establish approximate 95% tolerance intervals for tire life; that is, to establish an approximate range into which 95% of tire lives are expected to fall.\n\nThis empirical rule says that about 95% fall within plus or minus two standard deviations. In this case, 72000 to 120,000.\n\nIf the company were to set the mileage warranty at 80,000 miles, what fraction of the tires would fail prior to the warranted mileage? That is, what fraction of the tires will have tire life less than 80,000 miles?\n\n\nresult &lt;- radiant.basics::prob_norm(mean = 96000, stdev = 12000, lb = 80000)\nsummary(result)\n\nProbability calculator\nDistribution: Normal\nMean        : 96000 \nSt. dev     : 12000 \nLower bound : 80000 \nUpper bound : Inf \n\nP(X &lt; 80000) = 0.091\nP(X &gt; 80000) = 0.909\n\nplot(result)\n\n\n\n\n\n\n\n\n\nSuppose that Michelin management would like to set the mileage warranty level so that no more than 0.5 percent of the tires will fail to meet the warranted mileage (probability of failure 0.005,) What should the warranted mileage be, to the nearest 1000 miles? 65000\n\n\nresult &lt;- radiant.basics::prob_norm(mean = 96000, stdev = 12000, plb = 0.005)\nsummary(result, type = \"probs\")\n\nProbability calculator\nDistribution: Normal\nMean        : 96000 \nSt. dev     : 12000 \nLower bound : 0.005 \nUpper bound : 1 \n\nP(X &lt; 65090.048) = 0.005\nP(X &gt; 65090.048) = 0.995\n\nplot(result, type = \"probs\")",
+    "text": "Problem 4 [Normal]\nThe Michelin tire company has developed a revolutionary new type of steel-belted radial tire. After extensive testing, the population of tire lives is believed to be well represented by a normal distribution with mean tire life \\mu = 96,000 miles and standard deviation \\sigma = 12,000 miles. The company plans to offer a warranty providing for replacement tires if the original tires fail to last through the warranty period. Before embarking on an in-depth analysis of the warranty problem, we will first warm up with a few standard normal probability calculations.\n\nFind the probability that a standard (mean zero, standard deviation one) normal random variable assumes a value between -0.89 and 1.13.\n\n\nresult &lt;- radiant.basics::prob_norm(mean = 0, stdev = 1, lb = -0.89, ub = 1.13)\nsummary(result)\n\nProbability calculator\nDistribution: Normal\nMean        : 0 \nSt. dev     : 1 \nLower bound : -0.89 \nUpper bound : 1.13 \n\nP(X &lt; -0.89) = 0.187\nP(X &gt; -0.89) = 0.813\nP(X &lt; 1.13) = 0.871\nP(X &gt; 1.13) = 0.129\nP(-0.89 &lt; X &lt; 1.13)     = 0.684\n1 - P(-0.89 &lt; X &lt; 1.13) = 0.316\n\nplot(result)\n\n\n\n\n\n\n\n\n\nApproximate the value of z such that the probability of a standard normal random variable falling in the interval [0, z] is 0.495; that is, such that Pr(0 &lt; Z &lt; z) = 0.495.\n\n\nresult &lt;- radiant.basics::prob_norm(mean = 0, stdev = 1, plb = 0.5, pub = 0.995)\nsummary(result, type = \"probs\")\n\nProbability calculator\nDistribution: Normal\nMean        : 0 \nSt. dev     : 1 \nLower bound : 0.5 \nUpper bound : 0.995 \n\nP(X &lt; 0) = 0.5\nP(X &gt; 0) = 0.5\nP(X &lt; 2.576) = 0.995\nP(X &gt; 2.576) = 0.005\nP(0 &lt; X &lt; 2.576)     = 0.495\n1 - P(0 &lt; X &lt; 2.576) = 0.505\n\nplot(result, type = \"probs\")",
     "crumbs": [
       "About",
       "Slides",
@@ -2876,6 +2876,42 @@
     "title": "Probability Distributions",
     "section": "Revisiting a Homework Problem",
     "text": "Revisiting a Homework Problem\nModel.\nSimulation.\nThree Binomials.\n(0.8) Good working order.\n(0.1) Wearing Down.\n(0.1) In Need of Repair.\nAdd each.\nSimulate.",
+    "crumbs": [
+      "About",
+      "Slides",
+      "Probability Distributions"
+    ]
+  },
+  {
+    "objectID": "slides/week-9/index.html#michelin-and-normals",
+    "href": "slides/week-9/index.html#michelin-and-normals",
+    "title": "Probability Distributions",
+    "section": "Michelin and Normals",
+    "text": "Michelin and Normals\n\nGraph the Michelin-calibrated Normal(\\mu = 96,000, \\sigma = 12,000). Use the Empirical Rule to establish approximate 95% tolerance intervals for tire life; that is, to establish an approximate range into which 95% of tire lives are expected to fall.\n\nThis empirical rule says that about 95% fall within plus or minus two standard deviations. In this case, 72000 to 120,000.\n\nIf the company were to set the mileage warranty at 80,000 miles, what fraction of the tires would fail prior to the warranted mileage? That is, what fraction of the tires will have tire life less than 80,000 miles?\n\n\nresult &lt;- radiant.basics::prob_norm(mean = 96000, stdev = 12000, lb = 80000)\nsummary(result)\n\nProbability calculator\nDistribution: Normal\nMean        : 96000 \nSt. dev     : 12000 \nLower bound : 80000 \nUpper bound : Inf \n\nP(X &lt; 80000) = 0.091\nP(X &gt; 80000) = 0.909\n\nplot(result)",
+    "crumbs": [
+      "About",
+      "Slides",
+      "Probability Distributions"
+    ]
+  },
+  {
+    "objectID": "slides/week-9/index.html#a-calibrated-warranty",
+    "href": "slides/week-9/index.html#a-calibrated-warranty",
+    "title": "Probability Distributions",
+    "section": "A Calibrated Warranty",
+    "text": "A Calibrated Warranty\nSuppose that Michelin management would like to set the mileage warranty level so that no more than 0.5 percent of the tires will fail to meet the warranted mileage (probability of failure 0.005,) What should the warranted mileage be, to the nearest 1000 miles? 65000\n\nresult &lt;- radiant.basics::prob_norm(mean = 96000, stdev = 12000, plb = 0.005)\nsummary(result, type = \"probs\")\n\nProbability calculator\nDistribution: Normal\nMean        : 96000 \nSt. dev     : 12000 \nLower bound : 0.005 \nUpper bound : 1 \n\nP(X &lt; 65090.048) = 0.005\nP(X &gt; 65090.048) = 0.995\n\nplot(result, type = \"probs\")",
+    "crumbs": [
+      "About",
+      "Slides",
+      "Probability Distributions"
+    ]
+  },
+  {
+    "objectID": "slides/week-9/index.html#an-aside-on-the-lognormal-and-black-scholes-merton",
+    "href": "slides/week-9/index.html#an-aside-on-the-lognormal-and-black-scholes-merton",
+    "title": "Probability Distributions",
+    "section": "An Aside on the Lognormal and Black-Scholes-Merton",
+    "text": "An Aside on the Lognormal and Black-Scholes-Merton\n\nPrices must be positive.\nLogarithms and cumulative returns.",
     "crumbs": [
       "About",
       "Slides",
