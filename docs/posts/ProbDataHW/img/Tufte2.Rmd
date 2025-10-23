@@ -1,7 +1,13 @@
 ---
-title: "A Solution for Probability and Data Homework"
-author: "Robert  W. Walker"
-date: "2025-10-23"
+title: "A Tufte Handout for Probability and Data Homework"
+runningheader: "Tufte Handout with R Markdown" # only for pdf output
+subtitle: "An implementation in R Markdown" # only for html output
+author: "Robert W. Walker"
+date: "`r Sys.Date()`"
+output:
+  tufte::tufte_html: default
+bibliography: skeleton.bib
+link-citations: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -9,18 +15,12 @@ library(tufte)
 # invalidate cache when the tufte version changes
 knitr::opts_chunk$set(cache.extra = packageVersion('tufte'), echo=FALSE, message=FALSE, warning=FALSE)
 options(htmltools.dir.version = FALSE)
-load("./ProbData.RData")
+load("./../ProbData.RData")
 ```
 
 # Data Examples
 
-Two exercises based on data are a part of this review.
-
 ## Disability Expenditures
-
-The document can be directly [linked to.](img/data-examples.html).  The quarto rendering here is not perfect.
-
-The document can be directly [linked to.](img/Tufte2.html).
 
 The data set presented is designed to represent a sample of 1,000 DDS consumers (which provides a 95% confidence interval with a margin of error of $\pm$ 3.5\% for this 250,000 consumer population). The data set includes six variables (i.e., fields) which are: ID, age cohort/age (binned/unbinned), gender, expenditures, and ethnicity. NB: The data set originated from DDS’s Client Master File. In order to remain in compliance with California State Legislation, the data have been altered to protect the rights and privacy of specific individual consumers. The provided data set is based on actual attributes of consumers. 
 
@@ -39,6 +39,8 @@ The 0-5 cohort (preschool age) has the fewest needs and requires the least amoun
 **Ethnicity** is the key demographic variable in the data set as it pertains to the case. Eight ethnic groups are represented in the data set. These groups reflect the demographic profile of the State of California.  Our key area of interest will become Hispanic and White, non-Hispanic comparisons.
 
 # Questions for Discrimination
+
+## Averages
 
 `r newthought('Average Expenditures')`
 
@@ -125,6 +127,8 @@ result <- pivotr(
 dtab(result, caption = "") %>% render()
 ```
 
+## Medians
+
 `r newthought('Median Expenditures')`
 
 2.	What is the median of expenditures for: 
@@ -206,7 +210,7 @@ result <- pivotr(
 dtab(result, caption = "") %>% render()
 ```
 
-## Middle 50 Percent
+## Elements of the Interquartile Range
 
 `r newthought('The middle 50% of expenditures')`
 
@@ -290,6 +294,7 @@ dtab(result, caption = "") %>% render()
 CADDS %>% ggplot() + aes(x=Expenditures, y=Gender, color=Gender) + geom_violin(alpha=0.2, adjust=0.5) + geom_boxplot(alpha=0.5) + scale_color_viridis_d() + labs(title="Expenditures: Violin and Boxplots by Gender") + theme_minimal()
 ```
 
+## Summary Thoughts and Interpretation
 
 4.	Does discrimination in expenditures exist? There are two relevant potential forms of actionable discrimination: gender and ethnicity. Evaluate these two questions with the appropriate pivot table equivalent defined for each.
 
@@ -369,9 +374,29 @@ summary(
 ) + theme_minimal() }
 ```
 
-
+## Conditional Probability
 
 *	Provide the two relevant tables of conditional probabilities for that table.
+
+```{r fig.width = 7, fig.height = 17.23, dpi = 96}
+result <- cross_tabs(
+  UCBAdmit, 
+  var1 = "M.F", 
+  var2 = "Admit", 
+)
+summary(
+  result, 
+  check = c("observed", "row_perc", "col_perc")
+)
+```
+
+```{r, fig.margin=TRUE}
+{ plot(
+  result, 
+  check = c("row_perc", "col_perc"), 
+  custom = FALSE
+) + theme_minimal() }
+```
 
 ## Some questions....
 
@@ -387,13 +412,9 @@ Some questions....
 ![Screenshot](Screenshot 2025-10-23 at 12.27.04 PM.png)
 :::
 
+## Results {.tabset}
 
-
-## Results 
-
-::: {.panel-tabset}
-
-## Department A
+### Department A
 
 ```{r}
 result <- cross_tabs(
@@ -412,7 +433,7 @@ plot(result, check = c("observed", "row_perc"), custom = FALSE)
 summary(result, check = c("observed", "row_perc"))
 ```
 
-## Department B
+### Department B
 
 ```{r}
 result <- cross_tabs(
@@ -432,7 +453,7 @@ summary(result, check = c("observed", "row_perc"))
 ```
 
 
-## Department C
+### Department C
 
 ```{r}
 result <- cross_tabs(
@@ -452,7 +473,7 @@ summary(result, check = c("observed", "row_perc"))
 ```
 
 
-## Department D
+### Department D
 
 ```{r}
 result <- cross_tabs(
@@ -471,7 +492,7 @@ plot(result, check = c("observed", "row_perc"), custom = FALSE)
 summary(result, check = c("observed", "row_perc"))
 ```
 
-## Department E
+### Department E
 
 ```{r}
 result <- cross_tabs(
@@ -490,7 +511,7 @@ plot(result, check = c("observed", "row_perc"), custom = FALSE)
 summary(result, check = c("observed", "row_perc"))
 ```
 
-## Department F
+### Department F
 
 ```{r}
 result <- cross_tabs(
@@ -509,7 +530,7 @@ plot(result, check = c("observed", "row_perc"), custom = FALSE)
 summary(result, check = c("observed", "row_perc"))
 ```
 
-:::
+## {-}
 
 3.	Do any departments show differences in admissions rates by gender?
 
