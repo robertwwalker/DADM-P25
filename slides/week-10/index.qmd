@@ -12,6 +12,7 @@ format:
      incremental: true
      slide-number: c/t
      transition: zoom
+     embed-resources: true
      multiplex:
        url: 'https://multiplex-5adl.onrender.com'
        secret: "7af99b9bf4796dd3e5d8f2ee555098f4"
