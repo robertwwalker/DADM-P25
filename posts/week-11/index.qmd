@@ -17,6 +17,8 @@ Three links:
 - [A Tweet on Time Series](https://x.com/RexDouglass/status/1986154329825525790)
 - [LLMs and Math](https://x.com/rohanpaul_ai/status/1985845675687616573)
 
+The middle issue is of particular interest.  With numerical inference, estimates of uncertainty are crucial and indpendence plays a crucial role.  We want to think seriously about this.
+
 # Inference of Two Types: Binary and Numeric
 
 # Discrete Inference [Binary]
