@@ -108,14 +108,12 @@ datasaurus %>% ggplot() + aes(x=x, y=y, color=dataset) + geom_point() + guides(c
 
 # Always Visualize the Data
 
+
 ## Models Use Inference to ...
 
 . . .
 
 ### Unpack Black Boxes
-
-. . .
-
 ### We will literally do it with boxes/squares
 
 
@@ -155,7 +153,7 @@ Correlation is a **normed** measure; it varies between -1 and 1.
 
 ::::{.columns}
 
-::: {.column width="50%"}
+::: {.column width="30%"}
 
 A random sample of salaries in the 1990s for new hires from Oregon DAS.  I know *nothing* about them.  It is worth noting that these data represent a protected class by Oregon statute.  We have a state file or we can load the data from github.
 
@@ -168,7 +166,7 @@ OregonSalaries %>%
 
 :::
 
-::: {.column width="50%"}
+::: {.column width="30%"}
 
 ```{r Chunk1A, echo=FALSE}
 OregonSalaries %>% 
@@ -178,6 +176,15 @@ OregonSalaries %>%
 ```
 
 :::
+
+::: {.column width="40%"}
+
+```{r Chunk1AB, echo=FALSE}
+OregonSalaries
+```
+
+:::
+
 
 ::::
 
@@ -314,6 +321,8 @@ plot(density(lm(OregonSalaries$Salary~1)$residuals), main="Residual Salary")
 ```
 
 ## the quantile-quantile plot of a normal
+
+::::{.columns}
 
 ::: {.column width="40%"}
 
