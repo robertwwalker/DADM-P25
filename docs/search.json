@@ -5365,6 +5365,6 @@
     "href": "posts/week-12/index.html#the-squares-criterion-is-broadly-applied.",
     "title": "Squares and Black Boxes",
     "section": "The squares criterion is broadly applied.",
-    "text": "The squares criterion is broadly applied.\n\nPrincipal components derives the variable that accounts for the maximum variation in the collection of variables under study.\nRegression trees split continuous variables into groupings with minimal variation in the outcomes.\nClustering identifies variance reducing groups in multidimensional data."
+    "text": "The squares criterion is broadly applied.\n\nPrincipal components derives the variable that accounts for the maximum variation in the collection of variables under study.\nRegression trees split continuous variables into groupings with minimal variation in the outcomes.\nClustering identifies variance reducing groups in multidimensional data.\n\nEach of these falls under the general guise of machine learning along with the principle of training and testing on data."
   }
 ]

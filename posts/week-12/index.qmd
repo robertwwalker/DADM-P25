@@ -18,6 +18,10 @@ date: "2025-11-11"
 
 - Clustering identifies variance reducing groups in multidimensional data.
 
+Each of these falls under the general guise of machine learning along with the principle of training and testing on data.
+
+
+
 
 ## A link to the slides for the day.
 

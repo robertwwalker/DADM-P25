@@ -34,6 +34,7 @@
 <li><p>Regression trees split continuous variables into groupings with minimal variation in the outcomes.</p></li>
 <li><p>Clustering identifies variance reducing groups in multidimensional data.</p></li>
 </ul>
+<p>Each of these falls under the general guise of machine learning along with the principle of training and testing on data.</p>
 </section>
 <section id="a-link-to-the-slides-for-the-day." class="level2">
 <h2 class="anchored" data-anchor-id="a-link-to-the-slides-for-the-day.">A link to the slides for the day.</h2>
