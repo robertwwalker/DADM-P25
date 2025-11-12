@@ -9,7 +9,7 @@ format:
      theme: [custom.scss]
      scrollable: true
      logo: AGSMlogo.jpeg
-     footer: "DADM SLE 2025: Regression"
+     footer: "DADM PDX 2025: Regression"
      html-math-method: katex
      incremental: true
      slide-number: c/t
