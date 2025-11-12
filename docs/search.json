@@ -4701,14 +4701,14 @@
     "href": "posts/week-12/index.html",
     "title": "Squares and Black Boxes",
     "section": "",
-    "text": "A link to the slides for the day.\nSlides\nSlides-old\nThe most important piece of code.\n\n\nHow’s that done?\nload(url(\"https://github.com/robertwwalker/DADMStuff/raw/master/RegressionExamples.RData\"))\nlibrary(radiant)\n\n\nLoading required package: radiant.data\n\n\nLoading required package: magrittr\n\n\nLoading required package: ggplot2\n\n\nLoading required package: lubridate\n\n\n\nAttaching package: 'lubridate'\n\n\nThe following objects are masked from 'package:base':\n\n    date, intersect, setdiff, union\n\n\nLoading required package: tidyr\n\n\n\nAttaching package: 'tidyr'\n\n\nThe following object is masked from 'package:magrittr':\n\n    extract\n\n\nLoading required package: dplyr\n\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n\n\nAttaching package: 'radiant.data'\n\n\nThe following objects are masked from 'package:lubridate':\n\n    month, wday\n\n\nThe following object is masked from 'package:ggplot2':\n\n    diamonds\n\n\nThe following object is masked from 'package:magrittr':\n\n    set_attr\n\n\nThe following object is masked from 'package:base':\n\n    date\n\n\nLoading required package: radiant.design\n\n\nLoading required package: radiant.basics\n\n\nLoading required package: radiant.model\n\n\nLoading required package: radiant.multivariate\n\n\nHow’s that done?\nresult &lt;- regress(\n  EPL, \n  rvar = \"Points\", \n  evar = \"Wage.Bill.milGBP\"\n)\nsummary(result)\n\n\nLinear regression (OLS)\nData     : EPL \nResponse variable    : Points \nExplanatory variables: Wage.Bill.milGBP \nNull hyp.: the effect of Wage.Bill.milGBP on Points is zero\nAlt. hyp.: the effect of Wage.Bill.milGBP on Points is not zero\n\n                  coefficient std.error t.value p.value    \n (Intercept)           32.116     2.749  11.683  &lt; .001 ***\n Wage.Bill.milGBP       0.240     0.030   8.042  &lt; .001 ***\n\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nR-squared: 0.782,  Adjusted R-squared: 0.77 \nF-statistic: 64.675 df(1,18), p.value &lt; .001\nNr obs: 20 \n\n\nHow’s that done?\nlibrary(gvlma)\ngvlma(result$model)\n\n\n\nCall:\nlm(formula = form_upper, data = dataset)\n\nCoefficients:\n     (Intercept)  Wage.Bill.milGBP  \n         32.1159            0.2402  \n\n\nASSESSMENT OF THE LINEAR MODEL ASSUMPTIONS\nUSING THE GLOBAL TEST ON 4 DEGREES-OF-FREEDOM:\nLevel of Significance =  0.05 \n\nCall:\n gvlma(x = result$model) \n\n                    Value p-value                Decision\nGlobal Stat        4.8001 0.30843 Assumptions acceptable.\nSkewness           0.2378 0.62583 Assumptions acceptable.\nKurtosis           0.1547 0.69412 Assumptions acceptable.\nLink Function      1.5649 0.21096 Assumptions acceptable.\nHeteroscedasticity 2.8428 0.09178 Assumptions acceptable."
+    "text": "New Yorker"
   },
   {
     "objectID": "slides/squares/index.html",
     "href": "slides/squares/index.html",
     "title": "All About Squares",
     "section": "",
-    "text": "–\n\n\n\nBlack Box Technology\n\n\n\n\n\n\n\n\nHow’s that done?\nload(url(\"https://github.com/robertwwalker/DADMStuff/raw/master/RegressionExamples.RData\"))\ndatasaurus %&gt;% group_by(dataset) %&gt;% summarise(Mean.x = mean(x), Std.Dev.x = sd(x), Mean.y = mean(y), Std.Dev.y = sd(y)) %&gt;% kable(format=\"html\")\n\n\n\n\n\n\n\n\ndataset\nMean.x\nStd.Dev.x\nMean.y\nStd.Dev.y\n\n\n\n\naway\n54.26610\n16.76983\n47.83472\n26.93974\n\n\nbullseye\n54.26873\n16.76924\n47.83082\n26.93573\n\n\ncircle\n54.26732\n16.76001\n47.83772\n26.93004\n\n\ndino\n54.26327\n16.76514\n47.83225\n26.93540\n\n\ndots\n54.26030\n16.76774\n47.83983\n26.93019\n\n\nh_lines\n54.26144\n16.76590\n47.83025\n26.93988\n\n\nhigh_lines\n54.26881\n16.76670\n47.83545\n26.94000\n\n\nslant_down\n54.26785\n16.76676\n47.83590\n26.93610\n\n\nslant_up\n54.26588\n16.76885\n47.83150\n26.93861\n\n\nstar\n54.26734\n16.76896\n47.83955\n26.93027\n\n\nv_lines\n54.26993\n16.76996\n47.83699\n26.93768\n\n\nwide_lines\n54.26692\n16.77000\n47.83160\n26.93790\n\n\nx_shape\n54.26015\n16.76996\n47.83972\n26.93000",
+    "text": "–\n\n\n\nBlack Box Technology\n\n\n\n\n\n\n\n\n\n\n\n\n\ndataset\nMean.x\nStd.Dev.x\nMean.y\nStd.Dev.y\n\n\n\n\naway\n54.26610\n16.76983\n47.83472\n26.93974\n\n\nbullseye\n54.26873\n16.76924\n47.83082\n26.93573\n\n\ncircle\n54.26732\n16.76001\n47.83772\n26.93004\n\n\ndino\n54.26327\n16.76514\n47.83225\n26.93540\n\n\ndots\n54.26030\n16.76774\n47.83983\n26.93019\n\n\nh_lines\n54.26144\n16.76590\n47.83025\n26.93988\n\n\nhigh_lines\n54.26881\n16.76670\n47.83545\n26.94000\n\n\nslant_down\n54.26785\n16.76676\n47.83590\n26.93610\n\n\nslant_up\n54.26588\n16.76885\n47.83150\n26.93861\n\n\nstar\n54.26734\n16.76896\n47.83955\n26.93027\n\n\nv_lines\n54.26993\n16.76996\n47.83699\n26.93768\n\n\nwide_lines\n54.26692\n16.77000\n47.83160\n26.93790\n\n\nx_shape\n54.26015\n16.76996\n47.83972\n26.93000",
     "crumbs": [
       "About",
       "Slides",
@@ -4719,8 +4719,8 @@
     "objectID": "slides/squares/index.html#summary-statistics-are-insufficient",
     "href": "slides/squares/index.html#summary-statistics-are-insufficient",
     "title": "All About Squares",
-    "section": "Summary Statistics are Insufficient",
-    "text": "Summary Statistics are Insufficient\n\n\n\n\n\n\n\n\n\ndataset\nMean.x\nStd.Dev.x\nMean.y\nStd.Dev.y\n\n\n\n\naway\n54.26610\n16.76983\n47.83472\n26.93974\n\n\nbullseye\n54.26873\n16.76924\n47.83082\n26.93573\n\n\ncircle\n54.26732\n16.76001\n47.83772\n26.93004\n\n\ndino\n54.26327\n16.76514\n47.83225\n26.93540\n\n\ndots\n54.26030\n16.76774\n47.83983\n26.93019\n\n\nh_lines\n54.26144\n16.76590\n47.83025\n26.93988\n\n\nhigh_lines\n54.26881\n16.76670\n47.83545\n26.94000\n\n\nslant_down\n54.26785\n16.76676\n47.83590\n26.93610\n\n\nslant_up\n54.26588\n16.76885\n47.83150\n26.93861\n\n\nstar\n54.26734\n16.76896\n47.83955\n26.93027\n\n\nv_lines\n54.26993\n16.76996\n47.83699\n26.93768\n\n\nwide_lines\n54.26692\n16.77000\n47.83160\n26.93790\n\n\nx_shape\n54.26015\n16.76996\n47.83972\n26.93000",
+    "section": "",
+    "text": "dataset\nMean.x\nStd.Dev.x\nMean.y\nStd.Dev.y\n\n\n\n\naway\n54.26610\n16.76983\n47.83472\n26.93974\n\n\nbullseye\n54.26873\n16.76924\n47.83082\n26.93573\n\n\ncircle\n54.26732\n16.76001\n47.83772\n26.93004\n\n\ndino\n54.26327\n16.76514\n47.83225\n26.93540\n\n\ndots\n54.26030\n16.76774\n47.83983\n26.93019\n\n\nh_lines\n54.26144\n16.76590\n47.83025\n26.93988\n\n\nhigh_lines\n54.26881\n16.76670\n47.83545\n26.94000\n\n\nslant_down\n54.26785\n16.76676\n47.83590\n26.93610\n\n\nslant_up\n54.26588\n16.76885\n47.83150\n26.93861\n\n\nstar\n54.26734\n16.76896\n47.83955\n26.93027\n\n\nv_lines\n54.26993\n16.76996\n47.83699\n26.93768\n\n\nwide_lines\n54.26692\n16.77000\n47.83160\n26.93790\n\n\nx_shape\n54.26015\n16.76996\n47.83972\n26.93000",
     "crumbs": [
       "About",
       "Slides",
@@ -4732,7 +4732,7 @@
     "href": "slides/squares/index.html#models-use-inference-to",
     "title": "All About Squares",
     "section": "Models Use Inference to …",
-    "text": "Models Use Inference to …\n\nUnpack Black Boxes\n. . .\nWe will literally do it with boxes/squares",
+    "text": "Models Use Inference to …\n. . .\n\nUnpack Black Boxes\n. . .\n\n\nWe will literally do it with boxes/squares",
     "crumbs": [
       "About",
       "Slides",
@@ -4756,7 +4756,7 @@
     "href": "slides/squares/index.html#a-bit-on-covariance-and-correlation",
     "title": "All About Squares",
     "section": "A Bit on Covariance and Correlation",
-    "text": "A Bit on Covariance and Correlation\nCovariance is defined as: \\sum_{i} (x_{i} - \\overline{x})(y_{i} - \\overline{y})\nWhere \\overline{x} and \\overline{y} are the sample means of x and y. The items in parentheses are deviations from the mean; covariance is the product of those deviations from the mean. The metric of covariance is the product of the metric of x and y; often something for which no baseline exists. For this reason, we use a normalized form of covariance known as correlation, often just \\rho.\n\\rho_{xy} = \\sum_{i} \\frac{(x_{i} - \\overline{x})(y_{i} - \\overline{y})}{s_{x}s_{y}}\nCorrelation is a normed measure; it varies between -1 and 1.",
+    "text": "A Bit on Covariance and Correlation\nCovariance is defined as: \\[\\sum_{i} (x_{i} - \\overline{x})(y_{i} - \\overline{y})\\]\nWhere \\(\\overline{x}\\) and \\(\\overline{y}\\) are the sample means of x and y. The items in parentheses are deviations from the mean; covariance is the product of those deviations from the mean. The metric of covariance is the product of the metric of \\(x\\) and \\(y\\); often something for which no baseline exists. For this reason, we use a normalized form of covariance known as correlation, often just \\(\\rho\\).\n\\[\\rho_{xy} = \\sum_{i} \\frac{(x_{i} - \\overline{x})(y_{i} - \\overline{y})}{s_{x}s_{y}}\\]\nCorrelation is a normed measure; it varies between -1 and 1.",
     "crumbs": [
       "About",
       "Slides",
@@ -4804,7 +4804,7 @@
     "href": "slides/squares/index.html#about-those-squares-deviations",
     "title": "All About Squares",
     "section": "About Those Squares: Deviations",
-    "text": "About Those Squares: Deviations\nThe mean of all salaries is 41142.433. Represented in equation form, we have:\nSalary_{i} = \\alpha + \\epsilon_{i}\nThe i^{th} person’s salary is some average salary \\alpha [or perhaps \\mu to maintain conceptual continuity] (shown as a solid blue line) plus some idiosyncratic remainder or residual salary for individual i denoted by \\epsilon_{i} (shown as a blue arrow). Everything here is measured in dollars.\nSalary_{i}  = 41142.433 + \\epsilon_{i}",
+    "text": "About Those Squares: Deviations\nThe mean of all salaries is 41142.433. Represented in equation form, we have:\n\\[Salary_{i} = \\alpha + \\epsilon_{i}\\]\nThe \\(i^{th}\\) person’s salary is some average salary \\(\\alpha\\) [or perhaps \\(\\mu\\) to maintain conceptual continuity] (shown as a solid blue line) plus some idiosyncratic remainder or residual salary for individual \\(i\\) denoted by \\(\\epsilon_{i}\\) (shown as a blue arrow). Everything here is measured in dollars.\n\\[Salary_{i}  = 41142.433 + \\epsilon_{i}\\]",
     "crumbs": [
       "About",
       "Slides",
@@ -4827,8 +4827,8 @@
     "objectID": "slides/squares/index.html#some-language-and-f",
     "href": "slides/squares/index.html#some-language-and-f",
     "title": "All About Squares",
-    "section": "Some language and F",
-    "text": "Some language and F\nSum of squares: \\sum_{i=1}^{N} e_{i}^{2} Mean square: divide the sum of squares by k degrees of freedom. NB: Take the square root and you get the standard deviation. \\frac{1}{k}\\sum_{i=1}^{N} e_{i}^{2}\nFisher’s F ratio or the F describes the ratio of two \\chi^2 variables (mean square) with numerator and denominator degrees of freedom. It is the ratio of [degrees of freedom] averaged squared errors. As the ratio becomes large, we obtain greater evidence that the two are not the same. Let’s try that here.",
+    "section": "Some language and \\(F\\)",
+    "text": "Some language and \\(F\\)\nSum of squares: \\[\\sum_{i=1}^{N} e_{i}^{2}\\] Mean square: divide the sum of squares by \\(k\\) degrees of freedom. NB: Take the square root and you get the standard deviation. \\[\\frac{1}{k}\\sum_{i=1}^{N} e_{i}^{2}\\]\nFisher’s \\(F\\) ratio or the \\(F\\) describes the ratio of two \\(\\chi^2\\) variables (mean square) with numerator and denominator degrees of freedom. It is the ratio of [degrees of freedom] averaged squared errors. As the ratio becomes large, we obtain greater evidence that the two are not the same. Let’s try that here.",
     "crumbs": [
       "About",
       "Slides",
@@ -4840,7 +4840,7 @@
     "href": "slides/squares/index.html#the-core-conditional",
     "title": "All About Squares",
     "section": "The Core Conditional",
-    "text": "The Core Conditional\nBut all of this stems from the presumption that e_{i} is normal; that is a claim that cannot really be proven or disproven. It is a core assumption that we should try to verify/falsify.\nBecause the e_{i} being normal means implies that their squares are \\chi^2a and further that the ratio of their mean-squares are F.\nAs an aside, the technical definition of tb is a normal divided by the square root of a \\chi^2 so t and F must be equivalent with one degree of freedom in the numerator.\na This is why the various results in prop.test are reported as X-squared.\nb I mentioned this fact previously when introducing t (defined by degrees of freedom and with metric standard error.)",
+    "text": "The Core Conditional\nBut all of this stems from the presumption that \\(e_{i}\\) is normal; that is a claim that cannot really be proven or disproven. It is a core assumption that we should try to verify/falsify.\nBecause the \\(e_{i}\\) being normal means implies that their squares are \\(\\chi^2\\)a and further that the ratio of their mean-squares are \\(F\\).\nAs an aside, the technical definition of \\(t\\)b is a normal divided by the square root of a \\(\\chi^2\\) so \\(t\\) and \\(F\\) must be equivalent with one degree of freedom in the numerator.\na This is why the various results in prop.test are reported as X-squared.\nb I mentioned this fact previously when introducing t (defined by degrees of freedom and with metric standard error.)",
     "crumbs": [
       "About",
       "Slides",
@@ -4864,7 +4864,7 @@
     "href": "slides/squares/index.html#the-quantile-quantile-plot-of-a-normal",
     "title": "All About Squares",
     "section": "the quantile-quantile plot of a normal",
-    "text": "the quantile-quantile plot of a normal\n\nThe mean of residual salary is zero. The standard deviation is the root-mean-square. Compare observed residual salary [as z] to the hypothetical normal.\n\n\n\n\n\n\n\n\n\n\n::::",
+    "text": "the quantile-quantile plot of a normal\n\nThe mean of residual salary is zero. The standard deviation is the root-mean-square. Compare observed residual salary [as z] to the hypothetical normal.\n\n\n\n\n\n\n\n\n\n\n\n\n::::",
     "crumbs": [
       "About",
       "Slides",
@@ -4888,7 +4888,7 @@
     "href": "slides/squares/index.html#linear-models",
     "title": "All About Squares",
     "section": "Linear Models",
-    "text": "Linear Models\nWill expand on the previous by unpacking the box, reducing residual squares via the inclusion of features, explanatory variables, explanatory factors, exogenous inputs, predictor variables. In this case, let us posit that salary is a function of gender. As an equation, that yields:\nSalary_{i} = \\alpha + \\beta_{1}*Gender_{i} + \\epsilon_{i} We want to measure that \\beta; in this case, the difference between Male and Female. By default, R will include Female as the constant.\nWhat does the regression imply? That salary for each individual i is a function of a constant and gender. Given the way that R works, \\alpha will represent the average for females and \\beta will represent the difference between male and female average salaries. The \\epsilon will capture the difference between the individual’s salary and the average of their group (the mean of males or females).",
+    "text": "Linear Models\nWill expand on the previous by unpacking the box, reducing residual squares via the inclusion of features, explanatory variables, explanatory factors, exogenous inputs, predictor variables. In this case, let us posit that salary is a function of gender. As an equation, that yields:\n\\[Salary_{i} = \\alpha + \\beta_{1}*Gender_{i} + \\epsilon_{i}\\] We want to measure that \\(\\beta\\); in this case, the difference between Male and Female. By default, R will include Female as the constant.\nWhat does the regression imply? That salary for each individual \\(i\\) is a function of a constant and gender. Given the way that R works, \\(\\alpha\\) will represent the average for females and \\(\\beta\\) will represent the difference between male and female average salaries. The \\(\\epsilon\\) will capture the difference between the individual’s salary and the average of their group (the mean of males or females).",
     "crumbs": [
       "About",
       "Slides",
@@ -4948,7 +4948,7 @@
     "href": "slides/squares/index.html#analysis-of-variance-the-squares",
     "title": "All About Squares",
     "section": "Analysis of Variance: The Squares",
-    "text": "Analysis of Variance: The Squares\nF is the ratio of the two mean squares. It is also t^2.\n.small[\n\n\nAnalysis of Variance Table\n\nResponse: Salary\n          Df    Sum Sq   Mean Sq F value          Pr(&gt;F)    \nGender     1 654334108 654334108  82.264 0.0000000004223 ***\nResiduals 30 238621277   7954043                            \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\n]",
+    "text": "Analysis of Variance: The Squares\nF is the ratio of the two mean squares. It is also \\(t^2\\).\n.small[\n\n\nAnalysis of Variance Table\n\nResponse: Salary\n          Df    Sum Sq   Mean Sq F value          Pr(&gt;F)    \nGender     1 654334108 654334108  82.264 0.0000000004223 ***\nResiduals 30 238621277   7954043                            \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\n]",
     "crumbs": [
       "About",
       "Slides",
@@ -5020,7 +5020,7 @@
     "href": "slides/squares/index.html#some-basic-cost-accounting",
     "title": "All About Squares",
     "section": "Some Basic Cost Accounting",
-    "text": "Some Basic Cost Accounting\nTotal.Cost_{t} = \\alpha + \\beta*units_t + \\epsilon_{t}\nWith data on per period (t) costs and units produced, we can partition fixed \\alpha and variable costs \\beta (or cost per unit). Consider the data on Handmade Bags. We want to accomplish two things. First, to measure the two key quantities. Second, be able to predict costs for hypothetical number of units.\nA comment on correlation",
+    "text": "Some Basic Cost Accounting\n\\[Total.Cost_{t} = \\alpha + \\beta*units_t + \\epsilon_{t}\\]\nWith data on per period (t) costs and units produced, we can partition fixed \\(\\alpha\\) and variable costs \\(\\beta\\) (or cost per unit). Consider the data on Handmade Bags. We want to accomplish two things. First, to measure the two key quantities. Second, be able to predict costs for hypothetical number of units.\nA comment on correlation",
     "crumbs": [
       "About",
       "Slides",
@@ -5068,7 +5068,7 @@
     "href": "slides/squares/index.html#a-linear-model",
     "title": "All About Squares",
     "section": "A Linear Model",
-    "text": "A Linear Model\n\n\n\nCall:\nlm(formula = TotCost ~ units, data = HMB)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-1606.7  -610.9  -124.8   509.8  2522.3 \n\nCoefficients:\n             Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 12308.642    323.601   38.04   &lt;2e-16 ***\nunits          21.702      0.862   25.18   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 871.8 on 58 degrees of freedom\nMultiple R-squared:  0.9162,    Adjusted R-squared:  0.9147 \nF-statistic: 633.8 on 1 and 58 DF,  p-value: &lt; 2.2e-16\n\n\nTotal.Cost_{t} = 12308.64 + 21.70 * units_t + \\epsilon_{t} where \\epsilon_{t} has a standard deviation of 872 dollars.",
+    "text": "A Linear Model\n\n\n\nCall:\nlm(formula = TotCost ~ units, data = HMB)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-1606.7  -610.9  -124.8   509.8  2522.3 \n\nCoefficients:\n             Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 12308.642    323.601   38.04   &lt;2e-16 ***\nunits          21.702      0.862   25.18   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 871.8 on 58 degrees of freedom\nMultiple R-squared:  0.9162,    Adjusted R-squared:  0.9147 \nF-statistic: 633.8 on 1 and 58 DF,  p-value: &lt; 2.2e-16\n\n\n\\[Total.Cost_{t} = 12308.64 + 21.70 * units_t + \\epsilon_{t}\\] where \\(\\epsilon_{t}\\) has a standard deviation of 872 dollars.",
     "crumbs": [
       "About",
       "Slides",
@@ -5116,7 +5116,7 @@
     "href": "slides/squares/index.html#because-normal-is-sustainable-i-can-.",
     "title": "All About Squares",
     "section": "Because normal is sustainable, I can ….",
-    "text": "Because normal is sustainable, I can ….\n\nInterpret the table including t and F.\n\nUtilize confidence intervals for the estimates.\n\nPredict from the regression of two forms.\n\nSubject to examinations of other characteristics of the regression.",
+    "text": "Because normal is sustainable, I can ….\n\nInterpret the table including \\(t\\) and \\(F\\).\n\nUtilize confidence intervals for the estimates.\n\nPredict from the regression of two forms.\n\nSubject to examinations of other characteristics of the regression.",
     "crumbs": [
       "About",
       "Slides",
@@ -5140,7 +5140,7 @@
     "href": "slides/squares/index.html#confint-confidence-intervals",
     "title": "All About Squares",
     "section": "confint confidence intervals",
-    "text": "confint confidence intervals\nFrom normal, the slope and intercept have t confidence intervals.\n\n\n                  2.5 %      97.5 %\n(Intercept) 11660.88464 12956.39966\nunits          19.97605    23.42705\n\n\nWith 95% confidence, fixed costs range from 11660.88 to 12956.40 dollars per period and the variable costs range from 19.976 to 23.427 dollars per unit. If the goal is to attain 20 dollars per unit, we cannot rule that out [though a 95 percent lower bound would].\n\n\n                    5 %        95 %\n(Intercept) 11767.72623 12849.55807\nunits          20.26066    23.14245",
+    "text": "confint confidence intervals\nFrom normal, the slope and intercept have \\(t\\) confidence intervals.\n\n\n                  2.5 %      97.5 %\n(Intercept) 11660.88464 12956.39966\nunits          19.97605    23.42705\n\n\nWith 95% confidence, fixed costs range from 11660.88 to 12956.40 dollars per period and the variable costs range from 19.976 to 23.427 dollars per unit. If the goal is to attain 20 dollars per unit, we cannot rule that out [though a 95 percent lower bound would].\n\n\n                    5 %        95 %\n(Intercept) 11767.72623 12849.55807\nunits          20.26066    23.14245",
     "crumbs": [
       "About",
       "Slides",
@@ -5272,7 +5272,7 @@
     "href": "slides/squares/index.html#the-premier-league",
     "title": "All About Squares",
     "section": "The Premier League",
-    "text": "The Premier League\n\n\n\nCall:\nlm(formula = Points ~ Wage.Bill.milGBP, data = EPL)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-12.569  -3.201   0.353   3.712  11.129 \n\nCoefficients:\n                 Estimate Std. Error t value       Pr(&gt;|t|)    \n(Intercept)      32.11589    2.74905  11.683 0.000000000776 ***\nWage.Bill.milGBP  0.24023    0.02987   8.042 0.000000227415 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 6.438 on 18 degrees of freedom\nMultiple R-squared:  0.7823,    Adjusted R-squared:  0.7702 \nF-statistic: 64.67 on 1 and 18 DF,  p-value: 0.0000002274\n\n\nPoints = 32.12 + 0.24*Wage.Bill + \\epsilon",
+    "text": "The Premier League\n\n\n\nCall:\nlm(formula = Points ~ Wage.Bill.milGBP, data = EPL)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-12.569  -3.201   0.353   3.712  11.129 \n\nCoefficients:\n                 Estimate Std. Error t value       Pr(&gt;|t|)    \n(Intercept)      32.11589    2.74905  11.683 0.000000000776 ***\nWage.Bill.milGBP  0.24023    0.02987   8.042 0.000000227415 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 6.438 on 18 degrees of freedom\nMultiple R-squared:  0.7823,    Adjusted R-squared:  0.7702 \nF-statistic: 64.67 on 1 and 18 DF,  p-value: 0.0000002274\n\n\n\\[Points = 32.12 + 0.24*Wage.Bill + \\epsilon\\]",
     "crumbs": [
       "About",
       "Slides",
@@ -5332,11 +5332,39 @@
     "href": "slides/squares/index.html#some-concluding-remarks",
     "title": "All About Squares",
     "section": "Some Concluding Remarks",
-    "text": "Some Concluding Remarks\n\nIt’s all about squares. But really, it’s all about normals.\n\nAssessing normality is crucial to inference in linear models. But we cannot really know whether or not it holds. But if it does:\n\nSlopes and intercepts are t, as are their confidence intervals.\n\nSums of squares have ratios defined by F.\n\nPredictions have t averages and normal intervals.\n\nAll founded upon the sum of squared errors being \\chi^2.\n\n\nThis core idea of explaining variance or unpacking a black box is the core question to virtually all machine learning and modelling.\n\nThe capital asset pricing model.",
+    "text": "Some Concluding Remarks\n\nIt’s all about squares. But really, it’s all about normals.\n\nAssessing normality is crucial to inference in linear models. But we cannot really know whether or not it holds. But if it does:\n\nSlopes and intercepts are t, as are their confidence intervals.\n\nSums of squares have ratios defined by F.\n\nPredictions have t averages and normal intervals.\n\nAll founded upon the sum of squared errors being \\(\\chi^2\\).\n\n\nThis core idea of explaining variance or unpacking a black box is the core question to virtually all machine learning and modelling.\n\nThe capital asset pricing model.",
     "crumbs": [
       "About",
       "Slides",
       "All About Squares"
     ]
+  },
+  {
+    "objectID": "posts/week-12/index.html#returns-to-ai",
+    "href": "posts/week-12/index.html#returns-to-ai",
+    "title": "Squares and Black Boxes",
+    "section": "",
+    "text": "New Yorker"
+  },
+  {
+    "objectID": "posts/week-12/index.html#a-link-to-the-slides-for-the-day.",
+    "href": "posts/week-12/index.html#a-link-to-the-slides-for-the-day.",
+    "title": "Squares and Black Boxes",
+    "section": "A link to the slides for the day.",
+    "text": "A link to the slides for the day.\nSlides\nSlides-old"
+  },
+  {
+    "objectID": "posts/week-12/index.html#the-most-important-piece-of-code.",
+    "href": "posts/week-12/index.html#the-most-important-piece-of-code.",
+    "title": "Squares and Black Boxes",
+    "section": "The most important piece of code.",
+    "text": "The most important piece of code.\n\n\nHow’s that done?\nload(url(\"https://github.com/robertwwalker/DADMStuff/raw/master/RegressionExamples.RData\"))\nlibrary(radiant)\n\n\nLoading required package: radiant.data\n\n\nLoading required package: magrittr\n\n\nLoading required package: ggplot2\n\n\nLoading required package: lubridate\n\n\n\nAttaching package: 'lubridate'\n\n\nThe following objects are masked from 'package:base':\n\n    date, intersect, setdiff, union\n\n\nLoading required package: tidyr\n\n\n\nAttaching package: 'tidyr'\n\n\nThe following object is masked from 'package:magrittr':\n\n    extract\n\n\nLoading required package: dplyr\n\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n\n\nAttaching package: 'radiant.data'\n\n\nThe following objects are masked from 'package:lubridate':\n\n    month, wday\n\n\nThe following object is masked from 'package:ggplot2':\n\n    diamonds\n\n\nThe following object is masked from 'package:magrittr':\n\n    set_attr\n\n\nThe following object is masked from 'package:base':\n\n    date\n\n\nLoading required package: radiant.design\n\n\nLoading required package: radiant.basics\n\n\nLoading required package: radiant.model\n\n\nLoading required package: radiant.multivariate\n\n\nHow’s that done?\nresult &lt;- regress(\n  EPL, \n  rvar = \"Points\", \n  evar = \"Wage.Bill.milGBP\"\n)\nsummary(result)\n\n\nLinear regression (OLS)\nData     : EPL \nResponse variable    : Points \nExplanatory variables: Wage.Bill.milGBP \nNull hyp.: the effect of Wage.Bill.milGBP on Points is zero\nAlt. hyp.: the effect of Wage.Bill.milGBP on Points is not zero\n\n                  coefficient std.error t.value p.value    \n (Intercept)           32.116     2.749  11.683  &lt; .001 ***\n Wage.Bill.milGBP       0.240     0.030   8.042  &lt; .001 ***\n\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nR-squared: 0.782,  Adjusted R-squared: 0.77 \nF-statistic: 64.675 df(1,18), p.value &lt; .001\nNr obs: 20 \n\n\nHow’s that done?\nlibrary(gvlma)\ngvlma(result$model)\n\n\n\nCall:\nlm(formula = form_upper, data = dataset)\n\nCoefficients:\n     (Intercept)  Wage.Bill.milGBP  \n         32.1159            0.2402  \n\n\nASSESSMENT OF THE LINEAR MODEL ASSUMPTIONS\nUSING THE GLOBAL TEST ON 4 DEGREES-OF-FREEDOM:\nLevel of Significance =  0.05 \n\nCall:\n gvlma(x = result$model) \n\n                    Value p-value                Decision\nGlobal Stat        4.8001 0.30843 Assumptions acceptable.\nSkewness           0.2378 0.62583 Assumptions acceptable.\nKurtosis           0.1547 0.69412 Assumptions acceptable.\nLink Function      1.5649 0.21096 Assumptions acceptable.\nHeteroscedasticity 2.8428 0.09178 Assumptions acceptable."
+  },
+  {
+    "objectID": "posts/week-12/index.html#the-squares-criterion-is-broadly-applied.",
+    "href": "posts/week-12/index.html#the-squares-criterion-is-broadly-applied.",
+    "title": "Squares and Black Boxes",
+    "section": "The squares criterion is broadly applied.",
+    "text": "The squares criterion is broadly applied.\n\nPrincipal components derives the variable that accounts for the maximum variation in the collection of variables under study.\nRegression trees split continuous variables into groupings with minimal variation in the outcomes.\nClustering identifies variance reducing groups in multidimensional data."
   }
 ]

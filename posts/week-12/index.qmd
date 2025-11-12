@@ -5,13 +5,29 @@ author: "Robert  W. Walker"
 date: "2025-11-11"
 ---
 
-A link to the slides for the day.
+## Returns to AI?
+
++ [New Yorker](https://www.newyorker.com/news/the-financial-page/the-ai-profits-drought-and-the-lessons-of-history)
+
+
+## The squares criterion is broadly applied.
+
+- Principal components derives the variable that accounts for the maximum variation in the collection of variables under study.
+
+- Regression trees split continuous variables into groupings with minimal variation in the outcomes.
+
+- Clustering identifies variance reducing groups in multidimensional data.
+
+
+## A link to the slides for the day.
 
 [Slides](https://robertwwalker.github.io/DADM-P25/slides/squares/)
 
 [Slides-old](https://robertwwalker.github.io/AllAboutSquares/index.html)
 
-The most important piece of code.
+
+
+## The most important piece of code.
 
 ```{r}
 load(url("https://github.com/robertwwalker/DADMStuff/raw/master/RegressionExamples.RData"))
