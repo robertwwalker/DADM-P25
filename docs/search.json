@@ -2164,7 +2164,7 @@
     "href": "slides/MultReg/index.html#understanding-giving",
     "title": "Multiple Regresion with Alumni Giving",
     "section": "Understanding Giving",
-    "text": "Understanding Giving\nProvide an instructive graphic with interpretation for rates of giving. Discuss the symmetry, the center, and the spread. In addition, provide a 95% confidence interval for average giving. The data are quite skewed to the right with a few seemingly large and outlying values. The lower half [below the median] spans a much smaller range than the upper half even without considering those values.\n\nAlumniGiving %&gt;%\n    ggplot() + aes(x = Giving) + geom_boxplot()",
+    "text": "Understanding Giving\nThe data are quite skewed to the right with a few seemingly large and outlying values. The lower half [below the median] spans a much smaller range than the upper half even without considering those values.\n\nAlumniGiving %&gt;%\n    ggplot() + aes(x = Giving) + geom_boxplot()",
     "crumbs": [
       "About",
       "Slides",
@@ -2176,7 +2176,7 @@
     "href": "slides/MultReg/index.html#whats-up-with-special",
     "title": "Multiple Regresion with Alumni Giving",
     "section": "What’s Up with Special?",
-    "text": "What’s Up with Special?\nWith 95% confidence, what is the difference among special and non-special schools in terms of giving? Comparing independent samples, 0.1 to 0.34 higher for Special schools with 95% confidence.\n\nt.test(Giving ~ Special, data = AlumniGiving)\n\n\n    Welch Two Sample t-test\n\ndata:  Giving by Special\nt = -7, df = 2, p-value = 0.01\nalternative hypothesis: true difference in means between group No and group Yes is not equal to 0\n95 percent confidence interval:\n -0.3362 -0.0974\nsample estimates:\n mean in group No mean in group Yes \n            0.137             0.353",
+    "text": "What’s Up with Special?\nComparing independent samples, 0.1 to 0.34 higher for Special schools with 95% confidence.\n\nt.test(Giving ~ Special, data = AlumniGiving)\n\n\n    Welch Two Sample t-test\n\ndata:  Giving by Special\nt = -7, df = 2, p-value = 0.01\nalternative hypothesis: true difference in means between group No and group Yes is not equal to 0\n95 percent confidence interval:\n -0.3362 -0.0974\nsample estimates:\n mean in group No mean in group Yes \n            0.137             0.353",
     "crumbs": [
       "About",
       "Slides",
@@ -2188,7 +2188,7 @@
     "href": "slides/MultReg/index.html#big-classes-or-small-classes-more-common",
     "title": "Multiple Regresion with Alumni Giving",
     "section": "Big Classes or Small Classes more Common?",
-    "text": "Big Classes or Small Classes more Common?\nIs there a difference or no difference between the percentage of big classes and the percentage of small classes with 95% confidence? Provide a 95% confidence interval for the average difference and interpret the interval. With 95% confidence, the average school has 0.24 to 0.30 more small classes than big classes.\n\nt.test(AlumniGiving$Small.Classes, AlumniGiving$Big.Classes, paired = TRUE)\n\n\n    Paired t-test\n\ndata:  AlumniGiving$Small.Classes and AlumniGiving$Big.Classes\nt = 17, df = 122, p-value &lt;2e-16\nalternative hypothesis: true mean difference is not equal to 0\n95 percent confidence interval:\n 0.236 0.299\nsample estimates:\nmean difference \n          0.267",
+    "text": "Big Classes or Small Classes more Common?\nWith 95% confidence, the average school has 0.24 to 0.30 more small classes than big classes.\n\nt.test(AlumniGiving$Small.Classes, AlumniGiving$Big.Classes, paired = TRUE)\n\n\n    Paired t-test\n\ndata:  AlumniGiving$Small.Classes and AlumniGiving$Big.Classes\nt = 17, df = 122, p-value &lt;2e-16\nalternative hypothesis: true mean difference is not equal to 0\n95 percent confidence interval:\n 0.236 0.299\nsample estimates:\nmean difference \n          0.267",
     "crumbs": [
       "About",
       "Slides",
@@ -2248,7 +2248,7 @@
     "href": "slides/MultReg/index.html#residuals-with-special",
     "title": "Multiple Regresion with Alumni Giving",
     "section": "Residuals with Special",
-    "text": "Residuals with Special\nAre the residuals from the previous regression normal? Provide convincing evidence that they are. Compare this to the previous model?\nThey are certainly better as Special has pulled those extreme values of residual giving to the line.\n\nlibrary(gvlma)\ngvlma(result$model)\n\n\nCall:\nlm(formula = form_upper, data = dataset)\n\nCoefficients:\n       (Intercept)                 SFR       Small.Classes  \n          -0.18576            -0.00108             0.16470  \n       Big.Classes     Graduation.Rate  Freshman.Retention  \n          -0.02173             0.11096             0.24625  \n        SpecialYes  \n           0.18491  \n\n\nASSESSMENT OF THE LINEAR MODEL ASSUMPTIONS\nUSING THE GLOBAL TEST ON 4 DEGREES-OF-FREEDOM:\nLevel of Significance =  0.05 \n\nCall:\n gvlma(x = result$model) \n\n                   Value p-value                Decision\nGlobal Stat        7.579  0.1083 Assumptions acceptable.\nSkewness           2.726  0.0988 Assumptions acceptable.\nKurtosis           0.734  0.3915 Assumptions acceptable.\nLink Function      1.705  0.1916 Assumptions acceptable.\nHeteroscedasticity 2.414  0.1203 Assumptions acceptable.\n\n# gvlma(Model.S)",
+    "text": "Residuals with Special\nAre the residuals from the previous regression normal?\nThey are certainly better as Special has pulled those extreme values of residual giving to the line.\n\nlibrary(gvlma)\ngvlma(result$model)\n\n\nCall:\nlm(formula = form_upper, data = dataset)\n\nCoefficients:\n       (Intercept)                 SFR       Small.Classes  \n          -0.18576            -0.00108             0.16470  \n       Big.Classes     Graduation.Rate  Freshman.Retention  \n          -0.02173             0.11096             0.24625  \n        SpecialYes  \n           0.18491  \n\n\nASSESSMENT OF THE LINEAR MODEL ASSUMPTIONS\nUSING THE GLOBAL TEST ON 4 DEGREES-OF-FREEDOM:\nLevel of Significance =  0.05 \n\nCall:\n gvlma(x = result$model) \n\n                   Value p-value                Decision\nGlobal Stat        7.579  0.1083 Assumptions acceptable.\nSkewness           2.726  0.0988 Assumptions acceptable.\nKurtosis           0.734  0.3915 Assumptions acceptable.\nLink Function      1.705  0.1916 Assumptions acceptable.\nHeteroscedasticity 2.414  0.1203 Assumptions acceptable.\n\n# gvlma(Model.S)",
     "crumbs": [
       "About",
       "Slides",
@@ -2272,7 +2272,7 @@
     "href": "slides/MultReg/index.html#interpreting-the-slopes.",
     "title": "Multiple Regresion with Alumni Giving",
     "section": "Interpreting the slopes.",
-    "text": "Interpreting the slopes.\n\nconfint(result$model)\n\n                      2.5 %  97.5 %\n(Intercept)        -0.38013 0.00860\nSFR                -0.00412 0.00196\nSmall.Classes       0.05485 0.27456\nBig.Classes        -0.22497 0.18152\nGraduation.Rate    -0.05635 0.27827\nFreshman.Retention -0.05534 0.54784\nSpecialYes          0.12838 0.24144",
+    "text": "Interpreting the slopes.\nInterpreting the intercept here is reassuring. Though it is not clear what a school with an SFR [or any other measure for that matter] of 0 would be, the giving rate could be zero.\n\nconfint(result$model)\n\n                      2.5 %  97.5 %\n(Intercept)        -0.38013 0.00860\nSFR                -0.00412 0.00196\nSmall.Classes       0.05485 0.27456\nBig.Classes        -0.22497 0.18152\nGraduation.Rate    -0.05635 0.27827\nFreshman.Retention -0.05534 0.54784\nSpecialYes          0.12838 0.24144\n\n\nOtherwise, increase x by one unit and Giving changes by [Lower bound] to [Upper bound] with 95% confidence. Increase small classes by 10% [0.1] and Giving should increase by 0.5% to 2.75% [0.1*0.055] and [0.1*0.275]",
     "crumbs": [
       "About",
       "Slides",
@@ -5679,5 +5679,29 @@
     "title": "Squares Scale",
     "section": "A Paths Like Task",
     "text": "A Paths Like Task\n\nFT"
+  },
+  {
+    "objectID": "slides/MultReg/index.html#single-mean-whats-average-giving-with-95-confidence",
+    "href": "slides/MultReg/index.html#single-mean-whats-average-giving-with-95-confidence",
+    "title": "Multiple Regresion with Alumni Giving",
+    "section": "Single mean [what’s average giving with 95% confidence?]",
+    "text": "Single mean [what’s average giving with 95% confidence?]\n\nt.test(AlumniGiving$Giving)\n\n\n    One Sample t-test\n\ndata:  AlumniGiving$Giving\nt = 19, df = 122, p-value &lt;2e-16\nalternative hypothesis: true mean is not equal to 0\n95 percent confidence interval:\n 0.127 0.156\nsample estimates:\nmean of x \n    0.142",
+    "crumbs": [
+      "About",
+      "Slides",
+      "Multiple Regresion with Alumni Giving"
+    ]
+  },
+  {
+    "objectID": "slides/MultReg/index.html#predicting-the-data-an-aside",
+    "href": "slides/MultReg/index.html#predicting-the-data-an-aside",
+    "title": "Multiple Regresion with Alumni Giving",
+    "section": "Predicting the Data [An aside]",
+    "text": "Predicting the Data [An aside]\n\npred &lt;- predict(result, pred_cmd = c(\"Graduation.Rate=0.67\", \"Small.Classes=0.34\",\n    \"Big.Classes=0.23\", \"Special='No'\", \"Freshman.Retention=0.77\"), conf_lev = 0.9,\n    interval = \"prediction\")\n# plot(pred, xvar = 'Special', conf_lev = 0.9)\nprint(pred, n = 10)\n\nLinear regression (OLS)\nData                 : AlumniGiving \nResponse variable    : Giving \nExplanatory variables: SFR, Small.Classes, Big.Classes, Graduation.Rate, Freshman.Retention, Special \nInterval             : prediction \nPrediction command   : Graduation.Rate = 0.67, Small.Classes = 0.34, Big.Classes = 0.23, Special = 'No', Freshman.Retention = 0.77 \n\n    SFR Graduation.Rate Small.Classes Big.Classes Special\n 17.772           0.670         0.340       0.230      No\n Freshman.Retention Prediction    5%   95%   +/-\n              0.770      0.110 0.026 0.194 0.084",
+    "crumbs": [
+      "About",
+      "Slides",
+      "Multiple Regresion with Alumni Giving"
+    ]
   }
 ]

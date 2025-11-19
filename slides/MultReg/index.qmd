@@ -45,11 +45,11 @@ Three of them.  To be precise.
 
 ## $x_1$
 
-![x1](img/x1.png)
+![x1](img/x2.png)
 
 ## $x_2$
 
-![x2](img/x2.png)
+![x2](img/x1.png)
 
 ## Both
 
@@ -109,15 +109,22 @@ ExpReport(AlumniGiving, Target="Giving", op_file="EDA-Giving.html")
 
 ## Understanding Giving
 
-Provide an instructive graphic with interpretation for rates of giving.  Discuss the symmetry, the center, and the spread.  In addition, provide a 95% confidence interval for average giving.  **The data are quite skewed to the right with a few seemingly large and outlying values.  The lower half [below the median] spans a much smaller range than the upper half even without considering those values.**
+**The data are quite skewed to the right with a few seemingly large and outlying values.  The lower half [below the median] spans a much smaller range than the upper half even without considering those values.**
 
 ```{r}
 AlumniGiving %>% ggplot() + aes(x=Giving) + geom_boxplot()
 ```
 
+## Single mean [what's average giving with 95% confidence?]
+
+```{r}
+t.test(AlumniGiving$Giving)
+```
+
+
 ## What's Up with Special?
 
-With 95% confidence, what is the difference among special and non-special schools in terms of giving?  **Comparing `independent` samples, 0.1 to 0.34 higher for Special schools with 95% confidence.**
+**Comparing `independent` samples, 0.1 to 0.34 higher for Special schools with 95% confidence.**
 
 ```{r}
 t.test(Giving~Special, data=AlumniGiving)
@@ -125,7 +132,7 @@ t.test(Giving~Special, data=AlumniGiving)
 
 ## Big Classes or Small Classes more Common?
 
-Is there a difference or no difference between the percentage of big classes and the percentage of small classes with 95% confidence?  Provide a 95% confidence interval for the average difference and interpret the interval.  **With 95% confidence, the average school has 0.24 to 0.30 more small classes than big classes.**
+**With 95% confidence, the average school has 0.24 to 0.30 more small classes than big classes.**
 
 ```{r}
 t.test(AlumniGiving$Small.Classes,AlumniGiving$Big.Classes, paired=TRUE)
@@ -224,9 +231,9 @@ equatiomatic::extract_eq(result$model, use_coefs = TRUE, coef_digits = 4)
 
 ## Residuals with Special
 
-Are the residuals from the previous regression normal?  Provide convincing evidence that they are.  Compare this to the previous model?
+Are the residuals from the previous regression normal?  
 
-They are certainly better as Special has pulled those extreme values of residual giving to the line.
+**They are certainly better as Special has pulled those extreme values of residual giving to the line.**
 
 ```{r}
 library(gvlma)
@@ -248,9 +255,13 @@ AlumniGiving %>% arrange(desc(ResidsSpec)) %>% select(School, ResidsSpec) %>% he
 
 ## Interpreting the slopes.
 
+Interpreting the intercept here is reassuring.  Though it is not clear what a school with an SFR [or any other measure for that matter] of 0 would be, the giving rate could be zero.
+
 ```{r}
 confint(result$model)
 ```
+
+Otherwise, increase x by one unit and Giving changes by [Lower bound] to [Upper bound] with 95% confidence.  Increase small classes by 10% [0.1] and Giving should increase by 0.5% to 2.75% `[0.1*0.055]` and `[0.1*0.275]`
 
 ## Assessing the Development Director
 
@@ -278,11 +289,29 @@ pred <- predict(
   ), 
   conf_lev = 0.9
 )
+plot(pred, xvar = "Special", conf_lev = 0.95)
+print(pred, n = 10)
+```
+
+At 90%, this would be unacceptable.
+
+```{r fig.width = 7, fig.height = 5.38, dpi = 96}
+pred <- predict(
+  result, 
+  pred_cmd = c(
+    "Graduation.Rate=0.67", 
+    "Small.Classes=0.34", 
+    "Big.Classes=0.23", "Special='No'", 
+    "Freshman.Retention=0.77"
+  ), 
+  conf_lev = 0.9
+)
 plot(pred, xvar = "Special", conf_lev = 0.9)
 print(pred, n = 10)
 ```
 
-## Predicting the Data
+
+## Predicting the Data [An aside]
 
 ```{r}
 pred <- predict(
