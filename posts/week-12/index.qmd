@@ -2,7 +2,7 @@
 title: "Squares and Black Boxes"
 subtitle: "Covariance Structures"  
 author: "Robert  W. Walker"
-date: "2025-11-11"
+date: "2025-11-12"
 ---
 
 ## Returns to AI?
