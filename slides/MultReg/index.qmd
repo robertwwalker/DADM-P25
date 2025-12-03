@@ -57,6 +57,8 @@ Three of them.  To be precise.
 
 # What's going on?
 
+Both are related to the outcome.  Both are even more strongly related to each other.  Parsing the difference between them is impossible, there is not enough unique variance.  A big F so the model accounts for variation alongside small t's suggest exactly this.  Because it inflates the variance of the slope: hence Variance Inflation Factors.  A common solution is extracting the principal component but it comes at a cost.....  Levers.
+
 # Alumni Giving
 
 ## The setup

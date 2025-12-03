@@ -10,7 +10,48 @@
 <atom:link href="https://robertwwalker.github.io/DADM-P25/index.xml" rel="self" type="application/rss+xml"/>
 <description>Data Analysis, Modelling, and Decision Making</description>
 <generator>quarto-1.8.25</generator>
-<lastBuildDate>Wed, 19 Nov 2025 08:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 03 Dec 2025 08:00:00 GMT</lastBuildDate>
+<item>
+  <title>Some Concluding Remarks: Cognitive Empathy and Quantitative Information</title>
+  <dc:creator>Robert  W. Walker</dc:creator>
+  <link>https://robertwwalker.github.io/DADM-P25/posts/week-14/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="todays-date-a-confidence-interval" class="level2">
+
+<ul>
+<li><a href="https://x.com/davidad/status/1996314720484159542?s=20">The Date</a></li>
+</ul>
+</section>
+<section id="ai-investors" class="level2">
+<h2 class="anchored" data-anchor-id="ai-investors">AI Investors</h2>
+<ul>
+<li><a href="https://x.com/emollick/status/1995573136323215560?s=20">IRFA</a></li>
+</ul>
+</section>
+<section id="the-garbage-can" class="level2">
+<h2 class="anchored" data-anchor-id="the-garbage-can">The Garbage Can</h2>
+<ul>
+<li><a href="https://www.oneusefulthing.org/p/the-bitter-lesson-versus-the-garbage">Blog post</a></li>
+</ul>
+</section>
+<section id="foundation-models-of-two-types-this-week" class="level2">
+<h2 class="anchored" data-anchor-id="foundation-models-of-two-types-this-week">Foundation Models of Two Types This Week</h2>
+<ul>
+<li>AWS and NVIDIA</li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://robertwwalker.github.io/DADM-P25/posts/week-14/</guid>
+  <pubDate>Wed, 03 Dec 2025 08:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Squares Scale</title>
   <dc:creator>Robert  W. Walker</dc:creator>

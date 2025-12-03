@@ -1,0 +1,23 @@
+---
+title: "Some Concluding Remarks: Cognitive Empathy and Quantitative Information"
+subtitle: "Strategic Planning and Decision-Updates with Data"  
+author: "Robert  W. Walker"
+date: "2025-12-03"
+---
+
+
+## Today's Date: A Confidence Interval
+
++ [The Date](https://x.com/davidad/status/1996314720484159542?s=20)
+
+## AI Investors
+
++ [IRFA](https://x.com/emollick/status/1995573136323215560?s=20)
+
+## The Garbage Can
+
++ [Blog post](https://www.oneusefulthing.org/p/the-bitter-lesson-versus-the-garbage)
+
+## Foundation Models of Two Types This Week
+
++ AWS and NVIDIA
