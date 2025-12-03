@@ -25,3 +25,5 @@ date: "2025-12-03"
 ## A Gaming Devices Insight
 
 + [Google Doc](https://docs.google.com/document/d/1NnXbbNSQy_LTuNE2nwYfLw3X0Rsa481LTuAC19DXHFk/edit?usp=sharing)
+
++ [The more general problem](./img/Screenshot 2025-12-03 at 1.28.02 PM.png)
